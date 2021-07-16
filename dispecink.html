@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./styles/dispecink.css">
+	<title>Restia Dispečink</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container container">
+			<div class="header__title">
+				<div class="header__title-logo">
+					<img class="header__title-logo-img"
+						src="https://restia.cz/wp-content/uploads/2019/04/Restia-logo.svg" alt="RESTIA">
+					<span class="header__title-logo-name">DISPEČINK</span>
+				</div>
+				<span class="header__title-description">
+					<b>Chytrý</b> IT systém pro efektivní <b>rozvoz zboží</b>
+				</span>
+			</div>
+			<nav class="header__navbar header__navbar--large">
+				<a href="#" class="header__navbar-item header__navbar--large-item">Další služby Restia</a>
+				<a href="#" class="header__navbar-item header__navbar--large-item">FAQ</a>
+				<a href="#" class="header__navbar-item header__navbar--large-item">Kontakty</a>
+				<a href="#" class="header__navbar-item header__navbar-item--outlined header__navbar--large-item header__navbar--large-item--outlined">Objednat</a>
+			</nav>
+			<button class="header__navbar-burger" onclick="openNav()">
+				<span></span><span></span><span></span>
+			</button>
+			<nav class="header__navbar header__navbar--small">
+				<div class="header__navbar--small-items">
+					<button class="header__navbar-item header__navbar--small-item header__navbar--small-item-close-button" onclick="closeNav()">&times;</button>
+					<a href="#" class="header__navbar-item header__navbar--small-item">Další služby Restia</a>
+					<a href="#" class="header__navbar-item header__navbar--small-item">FAQ</a>
+					<a href="#" class="header__navbar-item header__navbar--small-item">Kontakty</a>
+					<a href="#" class="header__navbar-item header__navbar--small-item header__navbar-item--outlined  header__navbar--small-item--outlined">Objednat</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section class="intro">
+			<div class="container">
+				<div class="intro__info">
+					<h1 class="intro__info-heading">
+						ZJEDNODUŠTE SI <b>ŘÍZENÍ PODNIKU</b><br>
+						A <b>ŠETŘETE</b> ČAS, LIDI I BENZIN
+					</h1>
+					<span>Jedno kliknutí a víte vše:</span>
+					<div class="intro__list">
+						<figure class="intro__list-item">
+							<figcaption>
+								<span class="intro__list-item-text">Kdo kam jede</span>
+							</figcaption>
+							<img class="intro__list-item-img" src="./assets/dispecink/Group 615.svg" alt="">
+						</figure>
+						<figure class="intro__list-item">
+							<figcaption>
+								<span class="intro__list-item-text">Kdy tam bude</span>
+							</figcaption>
+							<img class="intro__list-item-img" src="./assets/dispecink/Group 609.svg" alt="">
+						</figure>
+						<figure class="intro__list-item">
+							<figcaption>
+								<span class="intro__list-item-text">Komu co veze</span>
+							</figcaption>
+							<img class="intro__list-item-img" src="./assets/dispecink/Group 607.svg" alt="">
+						</figure>
+						<figure class="intro__list-item">
+							<figcaption>
+								<span class="intro__list-item-text">Kdy se vrátí</span>
+							</figcaption>
+							<img class="intro__list-item-img" src="./assets/dispecink/Group 611.svg" alt="">
+						</figure>
+					</div>
+					<a class="button intro__info-button button">
+						VYZKOUŠET DEMO VERZI
+					</a>
+				</div>
+				<div class="intro__image">
+					<img src="./assets/dispecink/monitor dispečink.png" width="650" height="567"
+						alt="Zjednodušte si řízení podniku a šetřete čas, lidi i benzin">
+				</div>
+			</div>
+			<div class="intro__divider">
+				<img src="./assets/dispecink/Path 478.svg" alt="">
+			</div>
+		</section>
+		<section class="clients">
+			<div class="clients__carousel">
+				<img class="clients__store" src="./assets/dispecink/Group 599.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 604.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 607.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 609.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 611.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 615.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Skútr.svg" alt="">
+
+				<img class="clients__store" src="./assets/dispecink/Group 599.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 604.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 607.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 609.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 611.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 615.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Skútr.svg" alt="">
+			</div>
+		</section>
+		<section class="benefits">
+			<div class="container">
+				<div class="benefits__text">
+					<h2>
+						Restia <b>DISPEČINK ušetří</b> celý tým dispečerů!
+					</h2>
+					<span>ZAPNĚTE & JEĎTE</span>
+					<article class="benefits__items">
+						<h2 class="benefits__items-heading">
+							KOMU TO POMÁHÁ?
+						</h2>
+						<div class="benefits__items-list">
+							<div class="benefits__items-list-item">
+								<figure>
+									<img src="./assets/dispecink/Depositphotos_172616238_xl-2015@2x.png" alt="Restaurace">
+									<figcaption><span>RESTAURACE</span></figcaption>
+								</figure>
+							</div>
+							<div class="benefits__items-list-item">
+								<figure>
+									<img src="./assets/dispecink/Depositphotos_351281414_xl-2015@2x.png"
+										alt="Květinářství">
+									<figcaption><span>KVĚTINÁŘSTVÍ</span></figcaption>
+								</figure>
+							</div>
+							<div class="benefits__items-list-item">
+								<figure>
+									<img src="./assets/dispecink/Depositphotos_263299778_xl-2015@2x.png" alt="Kurýři">
+									<figcaption><span>KURÝŘI</span></figcaption>
+								</figure>
+							</div>
+							<div class="benefits__items-list-item">
+								<figure>
+									<img src="./assets/dispecink/pexels-max-fischer-5868119@2x.png" alt="E-shopy">
+									<figcaption><span>E-SHOPY</span></figcaption>
+								</figure>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="benefits__buttons">
+					<a href="" class="button benefits__buttons-button benefits__buttons-button--full">OBJEDNEJTE SI
+						KONZULTACI
+						ZDARMA</a>
+					<a href="" class="button benefits__buttons-button benefits__buttons-button--outlined">VYZKOUŠET DEMO
+						VERZI</a>
+				</div>
+			</div>
+		</section>
+		<div class="container">
+			<div class="easybox">
+				<h2>
+					<b>JEDNODUŠŠÍ</b> UŽ TO BÝT NEMŮŽE
+				</h2>
+				<p>
+					Známe každodenní provoz dispečinků. Proto jsme vyvinuli jednoduchý řídící software,<br />
+					který <b>skutečně šetří váš čas, lidi i benzin.</b>
+				</p>
+			</div>
+		</div>
+		<section class="options">
+			<div class="container">
+				<header class="options__header">
+					<h2>CO TO UMÍ</h2>
+				</header>
+				<ul class="options__list">
+					<li class="options__list-item">seřadit objednávky</li>
+					<li class="options__list-item">poslat SMS zákazníkům</li>
+					<li class="options__list-item">naplánovat trasy</li>
+					<li class="options__list-item">přehled o způsobu platby</li>
+					<li class="options__list-item">navigaci přes Google Maps</li>
+					<li class="options__list-item">import objednávek z agregátorů</li>
+				</ul>
+				<div class="options__buttons">
+					<a href="" class="button options__buttons-button options__buttons-button--full">OBJEDNEJTE SI
+						KONZULTACI
+						ZDARMA</a>
+					<a href="" class="button options__buttons-button options__buttons-button--outlined">VYZKOUŠET DEMO
+						VERZI</a>
+				</div>
+			</div>
+		</section>
+		<section class="clients">
+			<div class="clients__carousel">
+				<img class="clients__store" src="./assets/dispecink/Group 599.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 604.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 607.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 609.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 611.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 615.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Skútr.svg" alt="">
+
+				<img class="clients__store" src="./assets/dispecink/Group 599.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 604.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 607.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 609.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 611.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Group 615.svg" alt="">
+				<img class="clients__store" src="./assets/dispecink/Skútr.svg" alt="">
+			</div>
+		</section>
+		<section class="try">
+			<div class="try__map">
+				<img src="./assets/dispecink/Snímek obrazovky 2020-11-12 132638.png" alt="" class="try__map-img">
+			</div>
+			<div class="container">
+				<article class="try__box">
+					<div class="try__box-text">
+						<h2 class="try__box-text-heading">
+							Vyzkoušejte Restia DISPEČINK už <b>od 990 Kč měsíčně.</b>
+						</h2>
+						<p class="try__box-text-para">
+							Nemáme žádné skryté poplatky<br />
+							a hrajeme fér
+						</p>
+						<a href="" class=" button try__box-text-button">RYCHLÁ KONZULTACE ZDARMA</a>
+					</div>
+					<img src="./assets/dispecink/Group 623.png" alt="" class="try__box-img">
+				</article>
+			</div>
+		</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<img class="footer__img footer__img-building" src="./assets/dispecink/Group 604.svg" alt="">
+		<img class="footer__img footer__img-scooter" src="./assets/dispecink/Skútr.svg" alt="">
+		<div class="container row">
+			<div class="row__column row__column-address">
+				<div class="left">
+					<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="">
+					<address>
+						Americká 662/70<br />
+						Liberec 460 07<br />
+						IČ: 05960789<br />
+						DIČ: CZ05960789<br />
+						Datová schránka: k7zf699
+					</address>
+				</div>
+				<div class="right">
+					<div class="socials">
+						<a href="#" class="socials__link"><i class="fab fa-fw fa-facebook-f"></i></a>
+						<a href="#" class="socials__link"><i class="fab fa-fw fa-instagram"></i></a>
+						<a href="#" class="socials__link"><i class="fas fa-fw fa-rss"></i></a>
+						<a href="#" class="socials__link"><i class="fab fa-fw fa-google-plus-g"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="row__column row__column-restia">
+				<span class="row__column-heading">
+					Restia
+				</span>
+				<a href="">O nás</a>
+				<a href="">Objednávkový systém</a>
+				<a href="">Dispečink</a>
+				<a href="">Otázky a odpovědi</a>
+				<a href="">Podmínky užití</a>
+				<a href="">Reklamační řád</a>
+			</div>
+			<div class="row__column row__column-showroom">
+				<span class="row__column-heading">
+					Showroom
+				</span>
+				<address>
+					RESTIA &ndash; revolution/it<br />
+					Ludmilina 1687/3 180 00<br />
+					Praha 8 Palmovka
+				</address>
+			</div>
+			<div class="row__column row__column-contact">
+				<span class="row__column-heading">
+					Kontakt
+				</span>
+				<a class="mail" href="mailto:info@restia.cz">info@restia.cz</a>
+				<a class="mail" href="mailto:partneri@restia.cz">partneri@restia.cz</a>
+				<a class="mail" href="mailto:partneri@restia.cz">partneri@restia.cz</a>
+				<a class="tel" href="tel:+420721444434">+420 721 444 434</a>
+				<a class="tel" href="tel:+420777931661">+420 777 931 661</a>
+			</div>
+	</footer>
+
+	<script src="./scripts/dispecink.js"></script>
+	<script src="https://kit.fontawesome.com/5877601269.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
