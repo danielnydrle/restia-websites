@@ -37,15 +37,17 @@ section {
 }
 
 .container {
-	width: 1300px;
+	width: 1320px;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 0 !important;
 }
 
 .button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	margin-top: 50px;
 	padding: 28px 0;
 	width: 404px;
@@ -122,6 +124,7 @@ section {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
+			text-decoration: none;
 
 			&-img {
 				height: 30px;
@@ -578,11 +581,11 @@ section {
 	background-color: $gray-extradark;
 	color: white;
 	margin-top: 150px;
-	padding: 20px 0px 70px;
+	padding: 25px 0px 70px;
 
 	&__img {
 		position: relative;
-		top: -191px;
+		top: -196px;
 		margin-bottom: -155px;
 
 		&-building {
@@ -606,6 +609,7 @@ section {
 
 	a {
 		display: block;
+		width: max-content;
 		color: white;
 		text-decoration: none;
 		font: normal normal 300 16px $font-family;
@@ -618,6 +622,9 @@ section {
 	.row {
 		&__column {
 			&-address {
+				a {
+					width: max-content;
+				}
 				img {
 					width: 200px;
 				}
@@ -847,11 +854,12 @@ section {
 					&-close-button {
 						border: none;
 						background-color: transparent;
-						font-size: 30px !important;
+						font-size: 40px !important;
 						align-self: flex-end;
 						margin-bottom: 0;
 
 						&:hover {
+							cursor: pointer;
 							color: $red-medium;
 						}
 					}
@@ -1217,7 +1225,7 @@ section {
 
 	.footer {
 		&__img {
-			top: -190px;
+			top: -195px;
 
 			&-building {
 				height: 130px;
@@ -1233,9 +1241,10 @@ section {
 
 			&__column {
 				width: 100%;
+				flex-direction: column;
+				margin-bottom: 20px;
 
 				&-address {
-					display: flex;
 
 					.socials {
 						margin-top: 0;
@@ -1268,19 +1277,4 @@ section {
 		padding-bottom: 200px;
 	}
 
-	.footer {
-		.row {
-			&__column {
-				margin-bottom: 20px !important;
-
-				&-address {
-					.socials {
-						&__link {
-							font-size: 12px;
-						}
-					}
-				}
-			}
-		}
-	}
 }

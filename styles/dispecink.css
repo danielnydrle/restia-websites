@@ -19,15 +19,17 @@ section {
 }
 
 .container {
-  width: 1300px;
+  width: 1320px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 !important;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 50px;
   padding: 28px 0;
   width: 404px;
@@ -96,6 +98,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  text-decoration: none;
 }
 .header__title-logo-img {
   height: 30px;
@@ -472,11 +475,11 @@ section {
   background-color: #252525;
   color: white;
   margin-top: 150px;
-  padding: 20px 0px 70px;
+  padding: 25px 0px 70px;
 }
 .footer__img {
   position: relative;
-  top: -191px;
+  top: -196px;
   margin-bottom: -155px;
 }
 .footer__img-building {
@@ -495,12 +498,16 @@ section {
 }
 .footer a {
   display: block;
+  width: max-content;
   color: white;
   text-decoration: none;
   font: normal normal 300 16px "Rubik", sans-serif;
 }
 .footer address {
   font: normal normal 300 16px "Rubik", sans-serif !important;
+}
+.footer .row__column-address a {
+  width: max-content;
 }
 .footer .row__column-address img {
   width: 200px;
@@ -665,11 +672,12 @@ section {
   .header__navbar--small-item-close-button {
     border: none;
     background-color: transparent;
-    font-size: 30px !important;
+    font-size: 40px !important;
     align-self: flex-end;
     margin-bottom: 0;
   }
   .header__navbar--small-item-close-button:hover {
+    cursor: pointer;
     color: #C30010;
   }
   .header__navbar--small-item--outlined {
@@ -942,7 +950,7 @@ section {
   }
 
   .footer__img {
-    top: -190px;
+    top: -195px;
   }
   .footer__img-building {
     height: 130px;
@@ -955,9 +963,8 @@ section {
   }
   .footer .row__column {
     width: 100%;
-  }
-  .footer .row__column-address {
-    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
   .footer .row__column-address .socials {
     margin-top: 0;
@@ -976,13 +983,6 @@ section {
 
   .try {
     padding-bottom: 200px;
-  }
-
-  .footer .row__column {
-    margin-bottom: 20px !important;
-  }
-  .footer .row__column-address .socials__link {
-    font-size: 12px;
   }
 }
 

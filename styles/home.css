@@ -28,15 +28,17 @@ p {
 }
 
 .container {
-  width: 1300px;
+  width: 1320px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 !important;
 }
 
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 50px;
   padding: 28px;
   overflow: none;
@@ -136,6 +138,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  text-decoration: none;
 }
 .header__title-logo-img {
   height: 40px;
@@ -623,7 +626,7 @@ main > section.container {
 .footer {
   background-color: #252525;
   color: white;
-  padding: 20px 0px 70px;
+  padding: 50px 0px 70px;
 }
 .footer__img {
   position: relative;
@@ -646,12 +649,16 @@ main > section.container {
 }
 .footer a {
   display: block;
+  width: max-content;
   color: white;
   text-decoration: none;
   font: normal normal 300 16px "Rubik", sans-serif;
 }
 .footer address {
   font: normal normal 300 16px "Rubik", sans-serif !important;
+}
+.footer .row__column-address a {
+  width: max-content;
 }
 .footer .row__column-address img {
   width: 200px;
@@ -868,7 +875,7 @@ main > section.container {
     margin-left: 20px;
   }
   .header__navbar {
-    width: 70%;
+    width: 70% !important;
   }
   .header__navbar-item {
     margin-left: 30px;
@@ -973,7 +980,6 @@ main > section.container {
     display: block;
     height: 100vh;
     max-width: 50vw;
-    width: 100% !important;
     background-color: white;
     z-index: 20;
     position: fixed;
@@ -1303,6 +1309,7 @@ main > section.container {
   .footer .row__column {
     width: 100%;
     flex-direction: column;
+    margin-bottom: 20px;
   }
   .footer .row__column-address {
     display: flex;
@@ -1355,10 +1362,6 @@ main > section.container {
 
   .reviews__box {
     height: 300px;
-  }
-
-  .footer .row__column {
-    margin-bottom: 20px !important;
   }
 }
 

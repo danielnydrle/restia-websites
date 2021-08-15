@@ -50,15 +50,17 @@ p {
 }
 
 .container {
-	width: 1300px;
+	width: 1320px;
 	margin-right: auto;
 	margin-left: auto;
+	padding: 0 !important;
 }
 
 .button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	margin-top: 50px;
 	padding: 28px;
 	overflow: none;
@@ -174,6 +176,7 @@ p {
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
+			text-decoration: none;
 
 			&-img {
 				height: 40px;
@@ -767,7 +770,7 @@ main>section.container {
 .footer {
 	background-color: $gray-extradark;
 	color: white;
-	padding: 20px 0px 70px;
+	padding: 50px 0px 70px;
 
 	&__img {
 		position: relative;
@@ -795,6 +798,7 @@ main>section.container {
 
 	a {
 		display: block;
+		width: max-content;
 		color: white;
 		text-decoration: none;
 		font: normal normal 300 16px $font-family;
@@ -807,6 +811,9 @@ main>section.container {
 	.row {
 		&__column {
 			&-address {
+				a {
+					width: max-content;
+				}
 				img {
 					width: 200px;
 					height: auto;
@@ -1107,7 +1114,7 @@ main>section.container {
 		}
 
 		&__navbar {
-			width: 70%;
+			width: 70% !important;
 
 			&-item {
 				margin-left: 30px;
@@ -1251,7 +1258,6 @@ main>section.container {
 				display: block;
 				height: 100vh;
 				max-width: 50vw;
-				width: 100% !important;
 				background-color: white;
 				z-index: 20;
 				position: fixed;
@@ -1704,6 +1710,7 @@ main>section.container {
 			&__column {
 				width: 100%;
 				flex-direction: column;
+				margin-bottom: 20px;
 
 				&-address {
 					display: flex;
@@ -1790,11 +1797,4 @@ main>section.container {
 		}
 	}
 
-	.footer {
-		.row {
-			&__column {
-				margin-bottom: 20px !important;
-			}
-		}
-	}
 }
