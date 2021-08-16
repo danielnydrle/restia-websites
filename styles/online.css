@@ -203,6 +203,7 @@ p {
   justify-content: space-between;
 }
 .intro__info {
+  position: relative;
   width: 50%;
 }
 .intro__info-header {
@@ -218,7 +219,14 @@ p {
 .intro__info-list {
   position: relative;
   padding-left: 2ch;
-  list-style: circle;
+  list-style: disc;
+}
+.intro__info-list-line {
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  border: 1px dashed #4E4E4E;
+  z-index: 1;
 }
 .intro__info-list-item {
   position: relative;
@@ -229,6 +237,9 @@ p {
   vertical-align: middle;
   font-size: 30px;
   transition: 0.2s all linear;
+  background-color: white;
+  color: #4E4E4E;
+  z-index: 2;
 }
 .intro__info-list-item::before {
   content: "";
@@ -243,10 +254,10 @@ p {
   transform: scale(0);
   transform-origin: center;
   background-color: #C30010;
-  background-image: url("https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg");
   background-position: center;
-  background-size: 100%;
+  background-size: 70%;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 .intro__info-list-item-description {
   font: italic normal 400 18px "Nunito", sans-serif;
@@ -258,6 +269,16 @@ p {
 }
 .intro__info-list-item:hover::before {
   transform: scale(1.2);
+}
+.intro__info-list-item:nth-child(2)::before {
+  background-image: url("../assets/online/Group 181.svg");
+}
+.intro__info-list-item:nth-child(3)::before {
+  background-image: url("../assets/online/Group 683.svg");
+  background-size: 80%;
+}
+.intro__info-list-item:nth-child(4)::before {
+  background-image: url("../assets/online/Group 687.svg");
 }
 .intro__info-list::before {
   position: absolute;

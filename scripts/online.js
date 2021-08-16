@@ -1,6 +1,7 @@
 const mobileNav = document.querySelector(".header__navbar--small");
 const vid = document.querySelector(".intro__video-video");
 const vidButton = document.querySelector(".intro__video-button");
+const introLine = document.querySelector(".intro__info-list-line");
 let carouselCounter = 0;
 let isNavOpen = false;
 
@@ -12,6 +13,7 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
 
 window.onload = () => {
 	headerResize();
+	calculateIntroLine();
 }
 
 window.onscroll = () => {
@@ -52,6 +54,16 @@ toggleVid = () => {
 		vidButton.innerHTML = '<i class="fas fa-play"></i>';
 
 	}
+}
+
+calculateIntroLine = () => {
+	let introHeadings = document.querySelectorAll(".intro__info-list-item-heading");
+	let firstHeadingHeight = introHeadings[0].getBoundingClientRect().top;
+	let lastHeadingHeight = introHeadings[introHeadings.length - 1].getBoundingClientRect().top;
+	console.log(firstHeadingHeight);
+	let lineHeight = lastHeadingHeight - firstHeadingHeight;
+	introLine.style.height = `${lineHeight}px`;
+
 }
 
 document.querySelector(".reviews__box").addEventListener("slide.bs.carousel", (e) => {
