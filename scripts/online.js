@@ -18,6 +18,13 @@ window.onload = () => {
 
 window.onscroll = () => {
 	headerResize();
+	calculateIntroLine();
+}
+
+window.onresize = () => {
+	headerResize();
+	calculateIntroLine();
+
 }
 
 headerResize = () => {
@@ -60,7 +67,6 @@ calculateIntroLine = () => {
 	let introHeadings = document.querySelectorAll(".intro__info-list-item-heading");
 	let firstHeadingHeight = introHeadings[0].getBoundingClientRect().top;
 	let lastHeadingHeight = introHeadings[introHeadings.length - 1].getBoundingClientRect().top;
-	console.log(firstHeadingHeight);
 	let lineHeight = lastHeadingHeight - firstHeadingHeight;
 	introLine.style.height = `${lineHeight}px`;
 
