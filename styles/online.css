@@ -19,10 +19,6 @@ section {
   padding: 100px 0;
 }
 
-p {
-  text-align: justify;
-}
-
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
@@ -44,10 +40,6 @@ main {
 
 section {
   padding: 100px 0;
-}
-
-p {
-  text-align: justify;
 }
 
 @media screen and (max-width: 576px) {
@@ -84,7 +76,7 @@ p {
 .header-title-logo {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   text-decoration: none;
 }
 .header-title-logo-img {
@@ -296,10 +288,6 @@ section {
   padding: 100px 0;
 }
 
-p {
-  text-align: justify;
-}
-
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
@@ -364,6 +352,7 @@ p {
 .footer .row-column-address .socials-link i {
   padding: 6px 4px;
   margin-bottom: 0px;
+  box-sizing: content-box !important;
 }
 .footer .row-column-address .socials-link:hover {
   background-color: white;
@@ -556,6 +545,7 @@ h2 {
 }
 .intro-info-list-item-description {
   font: italic normal 400 18px "Nunito", sans-serif;
+  text-align: left;
   color: #919191;
 }
 .intro-info-list-item:hover::marker {
@@ -989,7 +979,7 @@ h2 {
 
 .table {
   position: relative;
-  top: 50px;
+  top: 200px;
   left: -50px;
   width: 70%;
   height: auto;
@@ -1036,7 +1026,7 @@ h2 {
 
   .table {
     width: 60%;
-    top: 20px;
+    top: 170px;
     margin-top: -50px;
   }
 }
@@ -1270,7 +1260,7 @@ h2 {
   }
 
   .try {
-    padding-bottom: 350px;
+    padding-bottom: 250px;
   }
   .try-box-img {
     width: 65%;
@@ -1293,9 +1283,15 @@ h2 {
   .intro-info-list {
     margin-left: 2ch;
   }
+  .intro-info-list::before {
+    width: 150%;
+  }
   .intro-info-list-item {
     width: 85%;
     padding-left: 10px;
+  }
+  .intro-info-list-item-description {
+    width: 90%;
   }
 
   .benefits-bubbles {
@@ -1365,7 +1361,7 @@ h2 {
   }
 
   .try {
-    padding-bottom: 250px;
+    padding-bottom: 200px;
   }
   .try-box {
     padding: 40px 30px;
@@ -1391,6 +1387,10 @@ h2 {
   }
 }
 @media screen and (max-width: 400px) {
+  .intro-info-list-item-description {
+    width: 100%;
+  }
+
   .benefits-bubbles-bubble {
     width: 100% !important;
   }

@@ -16,10 +16,6 @@ section {
   padding: 100px 0;
 }
 
-p {
-  text-align: justify;
-}
-
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
@@ -84,6 +80,7 @@ p {
 .footer .row-column-address .socials-link i {
   padding: 6px 4px;
   margin-bottom: 0px;
+  box-sizing: content-box !important;
 }
 .footer .row-column-address .socials-link:hover {
   background-color: white;

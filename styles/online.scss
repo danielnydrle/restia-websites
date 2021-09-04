@@ -156,6 +156,7 @@ h2 {
 
 				&-description {
 					font: italic normal 400 18px $font-nunito;
+					text-align: left;
 					color: $gray-medium;
 				}
 
@@ -694,7 +695,7 @@ h2 {
 
 .table {
 	position: relative;
-	top: 50px;
+	top: 200px;
 	left: -50px;
 	width: 70%;
 	height: auto;
@@ -760,7 +761,7 @@ h2 {
 
 	.table {
 		width: 60%;
-		top: 20px;
+		top: 170px;
 		margin-top: -50px;
 	}
 }
@@ -1080,7 +1081,7 @@ h2 {
 	}
 
 	.try {
-		padding-bottom: 350px;
+		padding-bottom: 250px;
 
 		&-box {
 
@@ -1112,10 +1113,17 @@ h2 {
 		&-info {
 			&-list {
 				margin-left: 2ch;
+				
+				&::before {
+					width: 150%;
+				}
 
 				&-item {
 					width: 85%;
 					padding-left: 10px;
+					&-description {
+						width: 90%;
+					}
 				}
 			}
 		}
@@ -1214,7 +1222,7 @@ h2 {
 	}
 
 	.try {
-		padding-bottom: 250px;
+		padding-bottom: 200px;
 
 		&-box {
 			padding: 40px 30px;
@@ -1248,6 +1256,17 @@ h2 {
 }
 
 @media screen and (max-width: 400px) {
+	.intro {
+		&-info {
+			&-list {
+				&-item {
+					&-description {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 	.benefits {
 		&-bubbles {
 			&-bubble {

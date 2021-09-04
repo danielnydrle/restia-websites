@@ -1,11 +1,9 @@
-const header = document.querySelector(".header");
 const dispecink = document.querySelector(".intro-image--dispecink");
 const pikolik = document.querySelector(".intro-image--pikolik");
 const agregator = document.querySelector(".intro-image--agregator");
 let state = 1;
 
 window.onload = () => {
-	headerResize();
 	validateEmail();
 	zIndexImages();
 }
@@ -14,20 +12,6 @@ window.onresize = () => {
 	dispecink.style.zIndex = "1";
 	pikolik.style.zIndex = "5";
 	agregator.style.zIndex = "8";
-}
-
-window.onscroll = () => {
-	headerResize();
-}
-
-headerResize = () => {
-	if (window.innerWidth > 992) {
-		if (window.pageYOffset > 50) {
-			header.style.height = "100px";
-		} else {
-			header.style.height = "150px";
-		}
-	}
 }
 
 zIndexImages = () => {
