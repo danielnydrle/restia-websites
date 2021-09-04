@@ -1,9 +1,7 @@
-const mobileNav = document.querySelector(".header__navbar--small");
 const header = document.querySelector(".header");
-const dispecink = document.querySelector(".intro__image--dispecink");
-const pikolik = document.querySelector(".intro__image--pikolik");
-const agregator = document.querySelector(".intro__image--agregator");
-let isNavOpen = false;
+const dispecink = document.querySelector(".intro-image--dispecink");
+const pikolik = document.querySelector(".intro-image--pikolik");
+const agregator = document.querySelector(".intro-image--agregator");
 let state = 1;
 
 window.onload = () => {
@@ -30,16 +28,6 @@ headerResize = () => {
 			header.style.height = "150px";
 		}
 	}
-}
-
-openNav = () => {
-	mobileNav.style.transform = "translateX(0%)"
-	isNavOpen = true;
-}
-
-closeNav = () => {
-	mobileNav.style.transform = "translateX(100%)"
-	isNavOpen = false;
 }
 
 zIndexImages = () => {
@@ -76,7 +64,7 @@ zIndexImages = () => {
 }
 
 //answers
-const questions = document.querySelectorAll(".questions__item-question");
+const questions = document.querySelectorAll(".questions-item-question");
 for (const question of questions) {
 	question.addEventListener("click", (e) => {
 		console.log(question);
@@ -86,7 +74,7 @@ for (const question of questions) {
 }
 
 toggleAnswer = (answerNumber) => {
-	let answer = document.querySelector(`.questions__item-answer--${answerNumber}`);
+	let answer = document.querySelector(`.questions-item-answer--${answerNumber}`);
 	let item = answer.parentElement;
 	if (answer.style.maxHeight) {
 		item.classList.remove("is-open");
@@ -101,8 +89,8 @@ toggleAnswer = (answerNumber) => {
 
 validateEmail = () => {
 	const rgx = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	const button = document.querySelector(".demo__form-submit");
-	let email = document.querySelector(".demo__form-email").value;
+	const button = document.querySelector(".demo-form-submit");
+	let email = document.querySelector(".demo-form-email").value;
 	let valid = rgx.test(email);
 	if (valid && !button.classList.contains("enabled")) {
 		button.classList.replace("disabled", "enabled");

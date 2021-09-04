@@ -1,0 +1,50 @@
+$gray-extradark: #252525;
+$gray-dark: #4E4E4E;
+$gray-semidark: #707070;
+$gray-medium: #919191;
+$gray-semilight: #CACACA;
+$gray-light: #F3F3F3;
+$gray-extralight: #F8F8F8;
+$red-dark: #830A0F;
+$red-medium: #C30010;
+$red-light: #E10819;
+$red-extralight: #DC4040;
+$font-family: "Rubik",
+sans-serif;
+$transition: all 0.3s ease-in-out;
+
+:root {
+	font-family: $font-family;
+	letter-spacing: 1px;
+}
+
+html,
+body,
+main {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+section {
+	padding: 100px 0;
+}
+
+@mixin scaleIn {
+	transition: $transition;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+p {
+	text-align: justify;
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+}

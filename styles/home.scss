@@ -155,7 +155,7 @@ p {
 	z-index: 10;
 	transition: $transition;
 
-	&__container {
+	&-container {
 		height: 100%;
 		display: flex;
 		justify-content: space-between;
@@ -166,7 +166,7 @@ p {
 		}
 	}
 
-	&__title {
+	&-title {
 		display: flex;
 		align-items: center;
 		height: 100%;
@@ -232,7 +232,7 @@ p {
 		}
 	}
 
-	&__navbar {
+	&-navbar {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -280,7 +280,7 @@ p {
 		justify-content: space-between;
 	}
 
-	&__info {
+	&-info {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -318,7 +318,7 @@ p {
 		}
 	}
 
-	&__images {
+	&-images {
 		display: block;
 		position: relative;
 		width: 40%;
@@ -338,7 +338,7 @@ p {
 		}
 	}
 
-	&__image {
+	&-image {
 		position: absolute;
 		animation: ccw 9s linear infinite;
 		z-index: 1;
@@ -418,13 +418,13 @@ p {
 		border-radius: 0 500px 500px 500px;
 	}
 
-	&__text {
+	&-text {
 		margin: 50px 0;
 		line-height: 30px;
 		font-weight: 500;
 	}
 
-	&__arrow {
+	&-arrow {
 		position: absolute;
 		width: 150px;
 		object-fit: cover;
@@ -432,7 +432,7 @@ p {
 		top: 145px;
 	}
 
-	&__items {
+	&-items {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -449,7 +449,7 @@ p {
 			box-shadow: 0px 15px 15px #0000000A;
 
 			&:hover {
-				.products__items-item-img {
+				.products-items-item-img {
 					img {
 						filter: none;
 					}
@@ -556,11 +556,11 @@ main>section.container {
 }
 
 .reasons {
-	&__header {
+	&-header {
 		text-align: center;
 	}
 
-	&__list {
+	&-list {
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
@@ -620,7 +620,7 @@ main>section.container {
 		align-items: center;
 	}
 
-	&__box {
+	&-box {
 		position: relative;
 		height: 200px;
 		width: 50%;
@@ -683,7 +683,7 @@ main>section.container {
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
 	.reviews {
-		&__box {
+		&-box {
 			background-color: #444444aa;
 			-webkit-backdrop-filter: blur(20px);
 			backdrop-filter: blur(20px);
@@ -694,7 +694,7 @@ main>section.container {
 /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 	.reviews {
-		&__box {
+		&-box {
 			background-color: #222222aa;
 
 			&::before {
@@ -708,7 +708,7 @@ main>section.container {
 }
 
 .questions {
-	&__item {
+	&-item {
 		transition: $transition;
 		margin-bottom: 30px;
 
@@ -744,7 +744,7 @@ main>section.container {
 		}
 
 		&.is-open {
-			.questions__item-question {
+			.questions-item-question {
 				&::after {
 					transform: rotate(45deg);
 				}
@@ -752,7 +752,7 @@ main>section.container {
 		}
 
 		&.is-closed {
-			.questions__item-question {
+			.questions-item-question {
 				color: $gray-dark;
 
 				&:hover {
@@ -772,7 +772,7 @@ main>section.container {
 	color: white;
 	padding: 50px 0px 70px;
 
-	&__img {
+	&-img {
 		position: relative;
 		top: -191px;
 		margin-bottom: -155px;
@@ -791,7 +791,7 @@ main>section.container {
 		justify-content: space-between;
 		align-items: flex-start;
 
-		&__column {
+		&-column {
 			width: 20%;
 		}
 	}
@@ -809,7 +809,7 @@ main>section.container {
 	}
 
 	.row {
-		&__column {
+		&-column {
 			&-address {
 				a {
 					width: max-content;
@@ -823,7 +823,7 @@ main>section.container {
 					margin-top: 20px;
 					display: flex;
 
-					&__link {
+					&-link {
 						font-size: 20px;
 						display: flex;
 						align-items: center;
@@ -878,11 +878,11 @@ main>section.container {
 	padding-right: 0 !important;
 	overflow: auto;
 
-	&__dialog {
+	&-dialog {
 		max-width: 40vw;
 	}
 
-	&__content {
+	&-content {
 		position: relative;
 		padding: 30px 50px;
 		border-radius: 20px;
@@ -894,7 +894,7 @@ main>section.container {
 		}
 	}
 
-	&__close-button {
+	&-close-button {
 		position: absolute;
 		top: 15px;
 		right: 20px;
@@ -911,7 +911,7 @@ main>section.container {
 
 	}
 
-	&__heading {
+	&-heading {
 		background-image: linear-gradient(#ffffff88, white), url("../assets/home/demo.png");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -942,7 +942,7 @@ main>section.container {
 		color: $gray-medium;
 	}
 
-	&__form {
+	&-form {
 		display: flex;
 		justify-content: space-between;
 		margin-top: 30px;
@@ -982,7 +982,7 @@ main>section.container {
 
 @media screen and (max-width: 1650px) {
 	.products {
-		&__arrow {
+		&-arrow {
 			left: calc(17vw - 333px);
 		}
 	}
@@ -990,13 +990,13 @@ main>section.container {
 
 @media screen and (max-width: 1400px) {
 	.header {
-		&__navbar {
+		&-navbar {
 			&-item {
 				margin-left: 25px;
 			}
 		}
 
-		&__title {
+		&-title {
 			&-logo {
 				&-img {
 					height: 32px;
@@ -1014,7 +1014,7 @@ main>section.container {
 	}
 
 	.intro {
-		&__info {
+		&-info {
 			&-buttons {
 				flex-direction: column;
 
@@ -1028,11 +1028,11 @@ main>section.container {
 			}
 		}
 
-		&__images {
+		&-images {
 			width: 50%;
 		}
 
-		&__image {
+		&-image {
 			&--dispecink {
 				top: 10%;
 			}
@@ -1048,11 +1048,11 @@ main>section.container {
 	}
 
 	.products {
-		&__arrow {
+		&-arrow {
 			display: none;
 		}
 
-		&__items {
+		&-items {
 			&-item {
 				padding: 60px 40px;
 			}
@@ -1060,7 +1060,7 @@ main>section.container {
 	}
 
 	.reviews {
-		&__box {
+		&-box {
 			width: 70%;
 
 			&-indicators {
@@ -1078,7 +1078,7 @@ main>section.container {
 	}
 
 	.demo {
-		&__dialog {
+		&-dialog {
 			max-width: 60vw;
 		}
 	}
@@ -1087,13 +1087,13 @@ main>section.container {
 
 @media screen and (max-width: 1200px) {
 	.header {
-		&__container {
+		&-container {
 			&>* {
 				width: auto !important;
 			}
 		}
 
-		&__title {
+		&-title {
 			width: max-content;
 
 			&-logo {
@@ -1113,7 +1113,7 @@ main>section.container {
 			}
 		}
 
-		&__navbar {
+		&-navbar {
 			width: 70% !important;
 
 			&-item {
@@ -1127,7 +1127,7 @@ main>section.container {
 			flex-wrap: wrap;
 		}
 
-		&__info {
+		&-info {
 			width: 100%;
 
 			&-heading {
@@ -1141,7 +1141,7 @@ main>section.container {
 			}
 		}
 
-		&__images {
+		&-images {
 			display: block;
 			position: relative;
 			animation: none;
@@ -1150,7 +1150,7 @@ main>section.container {
 			left: 5%;
 		}
 
-		&__image {
+		&-image {
 			display: block;
 			position: absolute;
 			animation: none;
@@ -1190,7 +1190,7 @@ main>section.container {
 			height: 600px;
 		}
 
-		&__items {
+		&-items {
 			&-item {
 				padding: 40px;
 
@@ -1208,7 +1208,7 @@ main>section.container {
 	}
 
 	.reasons {
-		&__list {
+		&-list {
 			flex-wrap: wrap;
 
 			&-item {
@@ -1227,7 +1227,7 @@ main>section.container {
 	}
 
 	.demo {
-		&__dialog {
+		&-dialog {
 			max-width: 70vw;
 		}
 	}
@@ -1236,7 +1236,7 @@ main>section.container {
 @media screen and (max-width: 992px) {
 
 	.header {
-		&__title {
+		&-title {
 			&-logo {
 				&-img {
 					height: 40px;
@@ -1248,7 +1248,7 @@ main>section.container {
 			}
 		}
 
-		&__navbar {
+		&-navbar {
 			&--large {
 				display: none;
 			}
@@ -1303,6 +1303,12 @@ main>section.container {
 					}
 				}
 
+				&.is-opened {
+					transform: translateX(0%);
+				}
+				&.is-closed {
+					transform: translateX(100%);
+				}
 			}
 
 			&-burger {
@@ -1346,12 +1352,12 @@ main>section.container {
 		padding-top: 100px;
 		margin-bottom: 50px !important;
 
-		&__images {
+		&-images {
 			height: 700px;
 			left: 2%;
 		}
 
-		&__image {
+		&-image {
 			&--dispecink {
 				left: 10%;
 			}
@@ -1377,7 +1383,7 @@ main>section.container {
 			border-radius: 0 2000px 2000px 2000px;
 		}
 
-		&__items {
+		&-items {
 			flex-direction: column;
 
 			&-item {
@@ -1387,7 +1393,7 @@ main>section.container {
 	}
 
 	.reasons {
-		&__list {
+		&-list {
 			&-item {
 				width: 100%;
 
@@ -1401,7 +1407,7 @@ main>section.container {
 	.reviews {
 		padding: 100px 0;
 
-		&__box {
+		&-box {
 			width: 80%;
 		}
 	}
@@ -1412,7 +1418,7 @@ main>section.container {
 			align-items: stretch;
 			flex-wrap: wrap;
 
-			&__column {
+			&-column {
 				width: 50%;
 
 				&:first-of-type {
@@ -1429,7 +1435,7 @@ main>section.container {
 	}
 
 	.demo {
-		&__form {
+		&-form {
 			display: flex;
 			flex-direction: column;
 
@@ -1452,7 +1458,7 @@ main>section.container {
 @media screen and (max-width: 768px) {
 
 	.header {
-		&__navbar {
+		&-navbar {
 			&-item {
 				&.button {
 					width: 80%;
@@ -1462,18 +1468,18 @@ main>section.container {
 	}
 
 	.intro {
-		&__info {
+		&-info {
 			&-heading {
 				font-size: 60px;
 			}
 		}
 
-		&__images {
+		&-images {
 			height: 450px;
 			left: 5%;
 		}
 
-		&__image {
+		&-image {
 			&--dispecink {
 				height: 350px;
 			}
@@ -1491,7 +1497,7 @@ main>section.container {
 	}
 
 	.products {
-		&__text {
+		&-text {
 			width: 70%;
 		}
 	}
@@ -1500,7 +1506,7 @@ main>section.container {
 		width: 110%;
 		right: 5vw;
 
-		&__box {
+		&-box {
 			width: 100%;
 			right: 0;
 		}
@@ -1525,7 +1531,7 @@ main>section.container {
 	.header {
 		height: 80px !important;
 
-		&__navbar {
+		&-navbar {
 			&--small {
 				max-width: 60%;
 
@@ -1553,7 +1559,7 @@ main>section.container {
 	.intro {
 		padding-top: 100px;
 
-		&__info {
+		&-info {
 			&-heading {
 				font-size: 40px;
 				line-height: 50px;
@@ -1569,11 +1575,11 @@ main>section.container {
 			}
 		}
 
-		&__images {
+		&-images {
 			left: 0 !important;
 		}
 
-		&__image {
+		&-image {
 
 			&--dispecink {
 				left: 0;
@@ -1595,7 +1601,7 @@ main>section.container {
 	}
 
 	.products {
-		&__items {
+		&-items {
 			&-item {
 				overflow: hidden;
 				position: relative;
@@ -1633,20 +1639,20 @@ main>section.container {
 				}
 
 				&--pikolik {
-					.products__items-item-img {
+					.products-items-item-img {
 						right: -45%;
 					}
 				}
 
 				&--dispecink {
-					.products__items-item-img {
+					.products-items-item-img {
 						top: 0;
 						right: 20%;
 					}
 				}
 
 				&:hover {
-					.products__items-item-img {
+					.products-items-item-img {
 						img {
 							filter: grayscale(1) opacity(0.05);
 						}
@@ -1677,13 +1683,13 @@ main>section.container {
 		border-radius: 0;
 		background-size: cover;
 
-		&__box {
+		&-box {
 			height: 250px;
 		}
 	}
 
 	.questions {
-		&__item {
+		&-item {
 			&-question {
 				width: 100%;
 				justify-content: center;
@@ -1692,7 +1698,7 @@ main>section.container {
 	}
 
 	.footer {
-		&__img {
+		&-img {
 			top: -190px;
 
 			&-building {
@@ -1707,7 +1713,7 @@ main>section.container {
 		.row {
 			flex-direction: column;
 
-			&__column {
+			&-column {
 				width: 100%;
 				flex-direction: column;
 				margin-bottom: 20px;
@@ -1718,7 +1724,7 @@ main>section.container {
 					.socials {
 						margin-top: 0;
 
-						&__link {
+						&-link {
 							margin-right: 5px;
 						}
 					}
@@ -1728,15 +1734,15 @@ main>section.container {
 	}
 
 	.demo {
-		&__dialog {
+		&-dialog {
 			max-width: 100%;
 		}
 
-		&__content {
+		&-content {
 			padding: 20px;
 		}
 
-		&__heading {
+		&-heading {
 			position: relative;
 			padding: 70px 0 20px;
 			width: calc(100% + 40px);
@@ -1749,13 +1755,13 @@ main>section.container {
 			width: auto;
 		}
 
-		&__form {
+		&-form {
 			* {
 				width: 100%;
 			}
 		}
 
-		&__close-button {
+		&-close-button {
 			z-index: 2000;
 		}
 	}
@@ -1764,7 +1770,7 @@ main>section.container {
 @media screen and (max-width: 400px) {
 
 	.header {
-		&__title {
+		&-title {
 			&-logo {
 				&-img {
 					height: 24px;
@@ -1776,7 +1782,7 @@ main>section.container {
 			}
 		}
 
-		&__navbar {
+		&-navbar {
 			&-item {
 				padding: 20px;
 			}
@@ -1784,7 +1790,7 @@ main>section.container {
 	}
 
 	.intro {
-		&__info {
+		&-info {
 			&-heading {
 				font-size: 30px;
 			}
@@ -1792,7 +1798,7 @@ main>section.container {
 	}
 
 	.reviews {
-		&__box {
+		&-box {
 			height: 300px;
 		}
 	}

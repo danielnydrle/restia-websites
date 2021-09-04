@@ -1,0 +1,167 @@
+@import "root";
+
+.footer {
+	background-color: $gray-extradark;
+	color: white;
+	margin-top: 150px;
+	padding: 25px 0px 70px;
+
+	&-img {
+		position: relative;
+		top: -196px;
+		margin-bottom: -155px;
+
+		&-building {
+			left: 15vw;
+		}
+
+		&-scooter {
+			left: 20vw;
+		}
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		&-column {
+			width: 20%;
+		}
+	}
+
+	a {
+		display: block;
+		width: max-content;
+		color: white;
+		text-decoration: none;
+		font: normal normal 300 16px $font-family;
+	}
+
+	address {
+		font: normal normal 300 16px $font-family !important;
+	}
+
+	.row {
+		&-column {
+			&-address {
+				a {
+					width: max-content;
+				}
+				img {
+					width: 200px;
+				}
+
+				.socials {
+					margin-top: 20px;
+					display: flex;
+
+					&-link {
+						font-size: 20px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						vertical-align: middle;
+						margin-right: 20px;
+						border: 2px solid white;
+						border-radius: 50px;
+						transition: $transition;
+
+						i {
+							padding: 6px 4px;
+							margin-bottom: 0px;
+						}
+
+						&:hover {
+							background-color: white;
+							color: $gray-extradark;
+						}
+					}
+				}
+			}
+
+			&-restia {
+				a {
+					text-decoration: underline;
+				}
+			}
+
+			&-contact {
+				.tel:first-of-type {
+					margin-bottom: 20px;
+				}
+			}
+
+			&-heading {
+				display: block;
+				font: normal normal 500 21px $font-family;
+				color: $red-medium;
+				padding-bottom: 10px !important;
+			}
+
+			* {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.footer {
+		.row {
+			justify-content: center;
+			align-items: stretch;
+			flex-wrap: wrap;
+
+			&-column {
+				width: 50%;
+
+				&:first-of-type {
+					margin-bottom: 30px;
+				}
+
+				&-address {
+					img {
+						width: 150px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+		&-img {
+			top: -195px;
+
+			&-building {
+				height: 130px;
+			}
+
+			&-scooter {
+				height: 70px;
+			}
+		}
+
+		.row {
+			flex-direction: column;
+
+			&-column {
+				width: 100%;
+				flex-direction: column;
+				margin-bottom: 20px;
+
+				&-address {
+
+					.socials {
+						margin-top: 0;
+
+						&-link {
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

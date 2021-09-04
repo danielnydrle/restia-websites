@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./styles/agregator.css">
+    <title>Restia Agregator</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container container">
+            <div class="header-title">
+                <a href="index.html" class="header-title-logo">
+                    <img class="header-title-logo-img"
+                        src="https://restia.cz/wp-content/uploads/2019/04/Restia-logo.svg" alt="RESTIA">
+                    <span class="header-title-logo-name">AGREGATOR</span>
+                </a>
+                <span class="header-title-description">
+                    Všechny <b>online objednávky</b> vaší restaurace <b>na jednom místě</b>
+                </span>
+            </div>
+            <nav class="header-navbar header-navbar--large">
+                <a href="#" class="header-navbar-item header-navbar--large-item">Další služby Restia</a>
+                <a href="#" class="header-navbar-item header-navbar--large-item">FAQ</a>
+                <a href="#" class="header-navbar-item header-navbar--large-item">Kontakty</a>
+                <a href="#"
+                    class="header-navbar-item header-navbar-item--outlined header-navbar--large-item header-navbar--large-item--outlined">Objednat</a>
+            </nav>
+            <button class="header-navbar-burger" onclick="openNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="header-navbar header-navbar--small is-closed">
+                <div class="header-navbar--small-items">
+                    <button class="header-navbar-item header-navbar--small-item header-navbar--small-item-close-button"
+                        onclick="closeNav()">&times;</button>
+                    <a href="#" class="header-navbar-item header-navbar--small-item">Další služby Restia</a>
+                    <a href="#" class="header-navbar-item header-navbar--small-item">FAQ</a>
+                    <a href="#" class="header-navbar-item header-navbar--small-item">Kontakty</a>
+                    <a href="#"
+                        class="header-navbar-item header-navbar--small-item header-navbar-item--outlined  header-navbar--small-item--outlined">Objednat</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+		<section class="questions">
+			<div class="container">
+				<div class="questions-item is-closed">
+					<button class="questions-item-question questions-item-question--1">Kolik tabletů v provozu
+						potřebujeme?</button>
+					<p class="questions-item-answer questions-item-answer--1">Lorem ipsum dolor, sit amet
+						consectetur
+						adipisicing
+						elit. Debitis
+						odio quibusdam magni, obcaecati praesentium itaque ipsum, culpa ex expedita excepturi quam
+						nostrum mollitia maxime repudiandae aliquam similique? Aliquam, illo ratione.</p>
+				</div>
+				<div class="questions-item is-closed">
+					<button class="questions-item-question questions-item-question--2">Kolik tabletů v provozu
+						potřebujeme?</button>
+					<p class="questions-item-answer questions-item-answer--2">Lorem ipsum, dolor sit amet
+						consectetur
+						adipisicing
+						elit. Dolorem
+						vel voluptate voluptatem dicta sit asperiores illum itaque, consequatur explicabo repellat neque
+						reiciendis? Eligendi dolorem nobis in consequatur suscipit, aperiam repellat!</p>
+				</div>
+				<div class="questions-item is-closed">
+					<button class="questions-item-question questions-item-question--3">Kolik tabletů v provozu
+						potřebujeme?</button>
+					<p class="questions-item-answer questions-item-answer questions-item-answer--3">Lorem
+						ipsum dolor
+						sit amet
+						consectetur adipisicing elit.
+						Nesciunt
+						voluptatum repudiandae voluptas cumque perferendis. Sunt totam obcaecati sequi atque deserunt?
+						Voluptatum unde nihil nostrum deleniti ipsa fugiat ea animi hic?</p>
+				</div>
+			</div>
+		</section>
+    </main>
+	<footer class="footer">
+		<img class="footer-img footer-img-building" src="./assets/dispecink/Group 604.svg" alt="">
+		<img class="footer-img footer-img-scooter" src="./assets/dispecink/Skutr.svg" alt="">
+		<div class="container row">
+			<div class="row-column row-column-address">
+				<div class="left">
+					<a href="index.html">
+						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="">
+					</a>
+					<address>
+						Americká 662/70<br />
+						Liberec 460 07<br />
+						IČ: 05960789<br />
+						DIČ: CZ05960789<br />
+						Datová schránka: k7zf699
+					</address>
+				</div>
+				<div class="right">
+					<div class="socials">
+						<a href="#" class="socials-link"><i class="fab fa-fw fa-facebook-f"></i></a>
+						<a href="#" class="socials-link"><i class="fab fa-fw fa-instagram"></i></a>
+						<a href="#" class="socials-link"><i class="fas fa-fw fa-rss"></i></a>
+						<a href="#" class="socials-link"><i class="fab fa-fw fa-google-plus-g"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="row-column row-column-restia">
+				<span class="row-column-heading">
+					Restia
+				</span>
+				<a href="">O nás</a>
+				<a href="">Objednávkový systém</a>
+				<a href="">Dispečink</a>
+				<a href="">Otázky a odpovědi</a>
+				<a href="">Podmínky užití</a>
+				<a href="">Reklamační řád</a>
+			</div>
+			<div class="row-column row-column-showroom">
+				<span class="row-column-heading">
+					Showroom
+				</span>
+				<address>
+					RESTIA &ndash; revolution/it<br />
+					Ludmilina 1687/3 180&nbsp;00<br />
+					Praha 8 Palmovka
+				</address>
+			</div>
+			<div class="row-column row-column-contact">
+				<span class="row-column-heading">
+					Kontakt
+				</span>
+				<a class="mail" href="mailto:info@restia.cz">info@restia.cz</a>
+				<a class="mail" href="mailto:partneri@restia.cz">partneri@restia.cz</a>
+				<a class="mail" href="mailto:partneri@restia.cz">partneri@restia.cz</a>
+				<a class="tel" href="tel:+420721444434">+420 721 444 434</a>
+				<a class="tel" href="tel:+420777931661">+420 777 931 661</a>
+			</div>
+	</footer>
+
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+	</script>
+	<script src="https://kit.fontawesome.com/5877601269.js" crossorigin="anonymous"></script>
+	<script src="./scripts/burger.js"></script>
+	<script src="./scripts/agregator.js"></script>
+</body>
+
+</html>

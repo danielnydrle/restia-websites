@@ -1,47 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
-$gray-extradark: #252525;
-$gray-dark: #707070;
-$gray-medium: #919191;
-$gray-light: #F3F3F3;
-$red-dark: #830A0F;
-$red-medium: #C30010;
-$red-light: #E10819;
-$font-family: "Rubik",
-sans-serif;
-$transition: all 0.3s ease-in-out;
-
-@mixin scaleIn {
-	transition: $transition;
-
-	&:hover {
-		transform: scale(1.1);
-	}
-}
-
-:root {
-	font-family: $font-family;
-	letter-spacing: 1px;
-}
-
-html,
-body,
-main {
-	position: relative;
-	padding: 0;
-	margin: 0;
-	overflow-x: hidden;
-}
-
-section {
-	padding: 100px 0;
-}
-
-.container {
-	width: 1320px;
-	margin-right: auto;
-	margin-left: auto;
-	padding: 0 !important;
-}
+@import "./root.scss";
+@import "./header.scss";
+@import "./footer.scss";
 
 .button {
 	display: flex;
@@ -62,132 +22,9 @@ section {
 	}
 }
 
-@media screen and (max-width: 1400px) {
-	.container {
-		width: 1150px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.container {
-		width: 960px;
-	}
-}
-
-@media screen and (max-width: 992px) {
-	.container {
-		width: 720px;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.container {
-		width: 540px;
-	}
-}
-
-@media screen and (max-width: 576px) {
-	.container {
-		width: 90%;
-	}
-}
-
 .header {
-	top: 0;
-	position: fixed;
-	width: 100%;
-	background-color: white;
-	height: 150px;
-	box-shadow: 0 15px 15px #0000000a;
-	z-index: 10;
-	transition: $transition;
-
-	&__container {
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		&>* {
-			width: 50%;
-		}
-	}
-
-	&__title {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 100%;
-		width: 55%;
-
-		&-logo {
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-end;
-			text-decoration: none;
-
-			&-img {
-				height: 30px;
-				width: auto;
-
-			}
-
-			&-name {
-				display: block;
-				margin-left: 5px;
-				font: normal small-caps 500 24px $font-family;
-				color: $red-dark;
-
-			}
-		}
-
-		&-description {
-			font: normal normal 300 18px $font-family;
-			display: block;
-			transition: $transition;
-
-			b {
-				font-weight: 500;
-			}
-		}
-	}
-
-	&__navbar {
-		display: flex;
-		justify-content: right;
-		align-items: center;
-
-		&--small {
-			display: none;
-		}
-
-		&-burger {
-			display: none;
-		}
-
-		&-item {
-			color: $gray-medium;
-			font: normal normal 500 16px "Rubik", sans-serif;
-			margin-left: 40px;
-			text-decoration: none;
-			transition: $transition;
-
-			&:hover {
-				color: black;
-			}
-
-			&--outlined {
-				color: white;
-				background-color: $red-medium;
-				padding: 15px 40px;
-				border-radius: 400px;
-
-				&:hover {
-					color: white;
-					background-color: $red-light;
-				}
-			}
-		}
+	&-title {
+		width: 58%;
 	}
 }
 
@@ -200,7 +37,7 @@ section {
 		justify-content: space-between;
 	}
 
-	&__info {
+	&-info {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -222,7 +59,7 @@ section {
 		}
 	}
 
-	&__image {
+	&-image {
 		position: relative;
 		z-index: 2;
 		width: 50%;
@@ -234,7 +71,7 @@ section {
 		}
 	}
 
-	&__list {
+	&-list {
 		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
@@ -258,7 +95,7 @@ section {
 		}
 	}
 
-	&__divider {
+	&-divider {
 		z-index: -1;
 		position: relative;
 		top: calc(-6vw - 151px);
@@ -289,20 +126,20 @@ section {
 	align-items: center;
 	height: 150px;
 
-	&__carousel {
+	&-carousel {
 		position: absolute;
 		left: 0;
 		overflow-x: hidden;
 		white-space: nowrap;
-		animation: scrollingClients 20s linear infinite;
+		animation: scrollingClients 30s linear infinite;
 	}
 
-	&:hover .clients__carousel {
+	&:hover .clients-carousel {
 		animation-play-state: paused;
 	}
 
-	&__store {
-		padding: 0 4vw;
+	&-store {
+		margin: 0 4vw;
 		height: 80px !important;
 	}
 }
@@ -330,7 +167,7 @@ section {
 .benefits {
 	text-align: center;
 
-	&__text {
+	&-text {
 		margin-bottom: 50px;
 
 		h2 {
@@ -339,7 +176,7 @@ section {
 		}
 	}
 
-	&__items {
+	&-items {
 
 		&-heading {
 			font-weight: 700 !important;
@@ -355,11 +192,11 @@ section {
 			&::before {
 				content: "";
 				position: absolute;
-				padding: 50px;
-				left: 0;
 				z-index: -1;
-				height: 350px;
-				width: 90%;
+				left: 0;
+				height: 450px;
+				min-width: 1400px;
+				width: 95%;
 				background-color: $gray-light;
 				border-radius: 0 400px 400px 0;
 			}
@@ -411,7 +248,7 @@ section {
 		}
 	}
 
-	&__buttons {
+	&-buttons {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -463,12 +300,12 @@ section {
 	flex-direction: column;
 	align-items: center;
 
-	&__header {
+	&-header {
 		text-align: center;
 		color: $red-medium;
 	}
 
-	&__list {
+	&-list {
 		width: 90%;
 		padding-left: 15%;
 		columns: 2;
@@ -491,7 +328,7 @@ section {
 		}
 	}
 
-	&__buttons {
+	&-buttons {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -525,19 +362,18 @@ section {
 	padding-top: 0 !important;
 	padding-bottom: 150px;
 
-	&__map {
+	&-map {
 		position: relative;
 		z-index: 1;
 		opacity: 0.5;
-
-		img {
-			width: 100%;
-			height: 300px;
-			object-fit: cover;
-		}
+		height: 400px;
+		background-image: url("../assets/dispecink/Mapa.png");
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 	}
 
-	&__box {
+	&-box {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -558,6 +394,7 @@ section {
 			}
 
 			&-para {
+				text-align: center;
 				font: normal normal 500 26px $font-family;
 			}
 
@@ -577,149 +414,19 @@ section {
 	}
 }
 
-.footer {
-	background-color: $gray-extradark;
-	color: white;
-	margin-top: 150px;
-	padding: 25px 0px 70px;
-
-	&__img {
-		position: relative;
-		top: -196px;
-		margin-bottom: -155px;
-
-		&-building {
-			left: 15vw;
-		}
-
-		&-scooter {
-			left: 20vw;
-		}
-	}
-
-	.row {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-
-		&__column {
-			width: 20%;
-		}
-	}
-
-	a {
-		display: block;
-		width: max-content;
-		color: white;
-		text-decoration: none;
-		font: normal normal 300 16px $font-family;
-	}
-
-	address {
-		font: normal normal 300 16px $font-family !important;
-	}
-
-	.row {
-		&__column {
-			&-address {
-				a {
-					width: max-content;
-				}
-				img {
-					width: 200px;
-				}
-
-				.socials {
-					margin-top: 20px;
-					display: flex;
-
-					&__link {
-						font-size: 20px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						vertical-align: middle;
-						margin-right: 20px;
-						border: 2px solid white;
-						border-radius: 50px;
-						transition: $transition;
-
-						i {
-							padding: 6px 4px;
-							margin-bottom: 0px;
-						}
-
-						&:hover {
-							background-color: white;
-							color: $gray-extradark;
-						}
-					}
-				}
-			}
-
-			&-restia {
-				a {
-					text-decoration: underline;
-				}
-			}
-
-			&-contact {
-				.tel:first-of-type {
-					margin-bottom: 20px;
-				}
-			}
-
-			&-heading {
-				display: block;
-				font: normal normal 500 21px $font-family;
-				color: $red-medium;
-				padding-bottom: 10px !important;
-			}
-
-			* {
-				margin-bottom: 5px;
-			}
-		}
-	}
-}
-
 @media screen and (max-width: 1400px) {
-	.header {
-		&__navbar {
-			&-item {
-				margin-left: 25px;
-			}
-		}
-
-		&__title {
-			&-logo {
-				&-img {
-					height: 26px;
-				}
-
-				&-name {
-					font-size: 20px;
-				}
-			}
-
-			&-description {
-				font-size: 16px;
-			}
-		}
-	}
-
 	.intro {
-		&__divider {
+		&-divider {
 			top: calc(-6vw - 90px);
 		}
 	}
 
 	.benefits {
-		&__items {
+		&-items {
 			&-list {
 				&::before {
-					height: 300px;
-					padding: 50px 4%;
+					height: 370px;
+					min-width: 1200px;
 				}
 
 				&-item {
@@ -731,38 +438,10 @@ section {
 }
 
 @media screen and (max-width: 1200px) {
-	.header {
-		&__title {
-			width: max-content;
-
-			&-logo {
-				&-img {
-					height: 30px;
-				}
-
-				&-name {
-					font-size: 24px;
-				}
-			}
-
-			&-description {
-				display: none;
-			}
-		}
-
-		&__navbar {
-			width: 70%;
-
-			&-item {
-				margin-left: 50px;
-			}
-		}
-	}
-
 	.intro {
 		overflow-x: hidden;
 
-		&__list {
+		&-list {
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: stretch;
@@ -777,7 +456,7 @@ section {
 			}
 		}
 
-		&__image {
+		&-image {
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -791,20 +470,20 @@ section {
 			}
 		}
 
-		&__divider {
+		&-divider {
 			top: calc(0.06vw - 165px);
 		}
 	}
 
 	.benefits {
-		&__items {
+		&-items {
 			&-list {
 				padding: 70px 0;
 
 				&::before {
-					height: 250px !important;
-					width: 100%;
-					padding: 50px 0 !important;
+					height: 300px;
+					width: 95%;
+					min-width: 1050px;
 				}
 
 				&-item {
@@ -815,98 +494,21 @@ section {
 	}
 
 	.options {
-		&__list {
+		&-list {
 			padding-left: 12%;
 		}
 	}
 }
 
 @media screen and (max-width: 992px) {
-
-	.header {
-		&__navbar {
-			&--large {
-				display: none;
-			}
-
-			&--small {
-				box-shadow: 0 15px 15px #0000000a;
-				display: block;
-				height: 100vh;
-				max-width: 50vw;
-				background-color: white;
-				z-index: 20;
-				position: fixed;
-				top: 0;
-				right: 0;
-				transition: $transition;
-
-				&-items {
-					display: flex;
-					flex-direction: column;
-				}
-
-				&-item {
-					margin-left: 0;
-					padding: 30px;
-					font-size: 24px;
-
-					&-close-button {
-						border: none;
-						background-color: transparent;
-						font-size: 40px !important;
-						align-self: flex-end;
-						margin-bottom: 0;
-
-						&:hover {
-							cursor: pointer;
-							color: $red-medium;
-						}
-					}
-
-					&--outlined {
-						margin: 0 20px;
-						text-align: center;
-					}
-				}
-
-			}
-
-			&-burger {
-				width: 50px;
-				padding: 10px;
-				background-color: transparent;
-				border: none;
-				display: flex;
-				flex-direction: column;
-
-				&:hover {
-					cursor: pointer;
-				}
-
-				span {
-					display: block;
-					width: 100%;
-					height: 4px;
-					background-color: $gray-medium;
-					border-radius: 20px;
-
-					&:nth-child(1) {
-						margin-bottom: 10px;
-					}
-
-					&:nth-child(3) {
-						margin-top: 10px;
-					}
-
-				}
-			}
-		}
-	}
-
-
 	section {
 		padding: 50px 0;
+	}
+
+	.header {
+		* {
+			box-sizing: border-box !important;
+		}
 	}
 
 	.intro {
@@ -920,13 +522,13 @@ section {
 			}
 		}
 
-		&__list {
+		&-list {
 			&-item {
 				width: 25%;
 			}
 		}
 
-		&__image {
+		&-image {
 			position: static;
 			padding-top: 30px;
 			height: 300px;
@@ -938,7 +540,7 @@ section {
 				left: 0px;
 			}
 		}
-		&__divider {
+		&-divider {
 			position: absolute;
 			width: 200%;
 			left: -50%;
@@ -948,7 +550,7 @@ section {
 	}
 
 	.benefits {
-		&__items {
+		&-items {
 			&-list {
 				padding: 0 !important;
 				justify-content: space-between;
@@ -956,9 +558,9 @@ section {
 				flex-wrap: wrap;
 
 				&::before {
-					height: 780px !important;
+					height: 770px;
 					width: 110%;
-					padding: 0 !important;
+					min-width: auto;
 				}
 
 				&-item {
@@ -974,7 +576,7 @@ section {
 	}
 
 	.options {
-		&__list {
+		&-list {
 			padding-left: 8%;
 			column-gap: 100px;
 			overflow: hidden;
@@ -988,30 +590,8 @@ section {
 	}
 
 	.try {
-		&__box {
+		&-box {
 			padding: 40px 60px;
-		}
-	}
-
-	.footer {
-		.row {
-			justify-content: center;
-			align-items: stretch;
-			flex-wrap: wrap;
-
-			&__column {
-				width: 50%;
-
-				&:first-of-type {
-					margin-bottom: 30px;
-				}
-
-				&-address {
-					img {
-						width: 150px;
-					}
-				}
-			}
 		}
 	}
 }
@@ -1019,7 +599,7 @@ section {
 @media screen and (max-width: 768px) {
 
 	.intro {
-		&__divider {
+		&-divider {
 			width: 300%;
 			top: 500px;
 			left: -90%;
@@ -1027,7 +607,7 @@ section {
 		}
 	}
 	.benefits {
-		&__items {
+		&-items {
 			&-list {
 				&::before {
 					height: 680px !important;
@@ -1041,7 +621,7 @@ section {
 			}
 		}
 
-		&__buttons {
+		&-buttons {
 			flex-direction: column;
 
 			&-button {
@@ -1056,7 +636,7 @@ section {
 	}
 
 	.options {
-		&__list {
+		&-list {
 			padding-left: 0;
 			columns: 1;
 
@@ -1065,7 +645,7 @@ section {
 			}
 		}
 
-		&__buttons {
+		&-buttons {
 			flex-direction: column;
 
 			&-button {
@@ -1082,7 +662,7 @@ section {
 	.try {
 		padding-bottom: 350px;
 
-		&__box {
+		&-box {
 			flex-direction: column;
 
 			&-img {
@@ -1097,45 +677,15 @@ section {
 }
 
 @media screen and (max-width: 576px) {
-
 	.button {
 		text-align: center;
 		width: 80%;
 		padding: 20px;
 	}
 
-	.header {
-		height: 100px;
-		&__navbar {
-
-			&-burger {
-				span {
-					height: 3px;
-
-					&:first-child {
-						margin-bottom: 8px;
-					}
-
-					&:last-child {
-						margin-top: 8px;
-					}
-				}
-			}
-			&--small {
-				max-width: 70%;
-				&-item {
-					font-size: 18px;
-					&--outlined {
-						padding: 20px;
-					}
-				}
-			}
-		}
-	}
-
 	.intro {
 		padding-top: 150px;
-		&__list {
+		&-list {
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: stretch;
@@ -1149,7 +699,7 @@ section {
 				}
 			}
 		}
-		&__divider {
+		&-divider {
 			width: 400%;
 			top: 600px;
 			left: -188%;
@@ -1158,7 +708,7 @@ section {
 	}
 
 	.benefits {
-		&__items {
+		&-items {
 			&-list {
 				position: relative;
 				justify-content: center;
@@ -1187,7 +737,7 @@ section {
 	}
 
 	.options {
-		&__list {
+		&-list {
 			&-item {
 				font-size: 18px;
 			}
@@ -1197,7 +747,11 @@ section {
 	.try {
 		padding-bottom: 300px;
 
-		&__box {
+		&-map {
+			height: 300px;
+		}
+
+		&-box {
 			padding: 40px 20px;
 
 			&-text {
@@ -1222,47 +776,12 @@ section {
 			}
 		}
 	}
-
-	.footer {
-		&__img {
-			top: -195px;
-
-			&-building {
-				height: 130px;
-			}
-
-			&-scooter {
-				height: 70px;
-			}
-		}
-
-		.row {
-			flex-direction: column;
-
-			&__column {
-				width: 100%;
-				flex-direction: column;
-				margin-bottom: 20px;
-
-				&-address {
-
-					.socials {
-						margin-top: 0;
-
-						&__link {
-							margin-right: 5px;
-						}
-					}
-				}
-			}
-		}
-	}
 }
 
 @media screen and (max-width: 400px) {
 
 	.header {
-		&__title {
+		&-title {
 			&-logo {
 				&-img {
 					height: 24px;

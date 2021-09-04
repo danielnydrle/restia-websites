@@ -1,63 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
-$gray-extradark: #252525;
-$gray-dark: #4E4E4E;
-$gray-semidark: #707070;
-$gray-medium: #919191;
-$gray-semilight: #CACACA;
-$gray-light: #F3F3F3;
-$gray-extralight: #F8F8F8;
-$red-dark: #830A0F;
-$red-medium: #C30010;
-$red-light: #E10819;
-$red-extralight: #DC4040;
+@import "./root.scss";
+@import "./header.scss";
+@import "./footer.scss";
 $font-rubik: "Rubik",
 sans-serif;
 $font-nunito: "Nunito",
 sans-serif;
-$transition: all 0.3s ease-in-out;
-
-@mixin scaleIn {
-	transition: $transition;
-
-	&:hover {
-		transform: scale(1.1);
-	}
-}
 
 :root {
 	font-family: $font-rubik !important;
-	color: $gray-extradark;
-	letter-spacing: 1px;
-}
-
-html,
-body,
-main {
-	position: relative;
-	padding: 0;
-	margin: 0;
-	overflow-x: hidden;
-}
-
-section {
-	padding: 100px 0;
 }
 
 h2 {
 	font: normal small-caps 400 40px $font-rubik;
-}
-
-p {
-	text-align: justify;
-}
-
-.container {
-	width: 1320px;
-	margin-right: auto;
-	margin-left: auto;
-	padding-left: 0;
-	padding-right: 0;
 }
 
 .button {
@@ -120,132 +76,9 @@ p {
 	}
 }
 
-@media screen and (max-width: 1400px) {
-	.container {
-		width: 1150px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-	.container {
-		width: 960px;
-	}
-}
-
-@media screen and (max-width: 992px) {
-	.container {
-		width: 720px;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.container {
-		width: 540px;
-	}
-}
-
-@media screen and (max-width: 576px) {
-	.container {
-		width: 90%;
-	}
-}
-
 .header {
-	top: 0;
-	position: fixed;
-	width: 100%;
-	background-color: white;
-	height: 150px;
-	box-shadow: 0 15px 15px #0000000a;
-	z-index: 10;
-	transition: $transition;
-
-	&__container {
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		&>* {
-			width: 30%;
-		}
-	}
-
-	&__title {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 100%;
-		width: 65%;
-
-		&-logo {
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-end;
-			text-decoration: none;
-
-			&-img {
-				height: 30px;
-				width: auto;
-
-			}
-
-			&-name {
-				display: block;
-				margin-left: 5px;
-				font: normal small-caps 500 24px $font-rubik;
-				color: $red-dark;
-
-			}
-		}
-
-		&-description {
-			font: normal normal 300 18px $font-rubik;
-			display: block;
-			transition: $transition;
-
-			b {
-				font-weight: 500;
-			}
-		}
-	}
-
-	&__navbar {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-
-		&--small {
-			display: none;
-		}
-
-		&-burger {
-			display: none;
-		}
-
-		&-item {
-			color: $gray-medium;
-			font: normal normal 500 16px "Rubik", sans-serif;
-			margin-left: 40px;
-			text-decoration: none;
-			transition: $transition;
-
-			&:hover {
-				color: black;
-			}
-
-			&--outlined {
-				color: white;
-				background-color: $red-medium;
-				padding: 15px 40px;
-				border-radius: 400px;
-
-				&:hover {
-					color: white;
-					background-color: $red-light;
-				}
-			}
-		}
+	&-title {
+		width: 80%;
 	}
 }
 
@@ -258,7 +91,7 @@ p {
 		justify-content: space-between;
 	}
 
-	&__info {
+	&-info {
 		position: relative;
 		width: 50%;
 
@@ -325,12 +158,13 @@ p {
 					font: italic normal 400 18px $font-nunito;
 					color: $gray-medium;
 				}
-				
+
 				&:hover {
 					&::marker {
 						display: none;
 						color: transparent;
 					}
+
 					&::before {
 						transform: scale(1.2);
 					}
@@ -374,7 +208,7 @@ p {
 		}
 	}
 
-	&__video {
+	&-video {
 		position: relative;
 		top: 200px;
 		width: 45%;
@@ -418,7 +252,7 @@ p {
 
 @-moz-document url-prefix() {
 	.intro {
-		&__info {
+		&-info {
 			&-list {
 				&-item {
 					&::before {
@@ -449,7 +283,7 @@ p {
 	align-items: center;
 	height: 150px;
 
-	&__carousel {
+	&-carousel {
 		position: absolute;
 		left: 0;
 		overflow-x: hidden;
@@ -457,11 +291,11 @@ p {
 		animation: scrollingClients 20s linear infinite;
 	}
 
-	&:hover .clients__carousel {
+	&:hover .clients-carousel {
 		animation-play-state: paused;
 	}
 
-	&__store {
+	&-store {
 		padding: 0 4vw;
 		height: 80px !important;
 	}
@@ -470,7 +304,7 @@ p {
 .benefits {
 	position: relative;
 
-	&__header {
+	&-header {
 		margin-bottom: 100px;
 		text-align: center;
 
@@ -479,7 +313,7 @@ p {
 		}
 	}
 
-	&__bubbles {
+	&-bubbles {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -525,7 +359,7 @@ p {
 		}
 	}
 
-	&__buttons {
+	&-buttons {
 		display: flex;
 		justify-content: center;
 		margin-top: 100px;
@@ -535,7 +369,7 @@ p {
 		}
 	}
 
-	&__bag {
+	&-bag {
 		position: absolute;
 		top: 120px;
 		left: 0;
@@ -543,7 +377,7 @@ p {
 		z-index: -1;
 	}
 
-	&__tray {
+	&-tray {
 		position: absolute;
 		right: 0;
 		bottom: 70px;
@@ -555,7 +389,7 @@ p {
 .features {
 	padding: 0 0 50px;
 
-	&__header {
+	&-header {
 		text-align: center;
 		margin-bottom: 70px;
 
@@ -571,7 +405,7 @@ p {
 		}
 	}
 
-	&__list {
+	&-list {
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
@@ -613,7 +447,7 @@ p {
 			}
 
 			&:hover {
-				.features__list-item {
+				.features-list-item {
 					&-header {
 						&-img {
 							transform: scale(1.1);
@@ -668,7 +502,7 @@ p {
 			filter: opacity(0.5);
 		}
 	}*/
-	&__header {
+	&-header {
 		position: relative;
 		top: -100px;
 		margin-bottom: -100px;
@@ -693,7 +527,7 @@ p {
 		height: 900px;
 	}
 
-	&__box {
+	&-box {
 		width: 50%;
 		height: 50%;
 		border-radius: 5px;
@@ -761,6 +595,7 @@ p {
 
 					p {
 						margin-bottom: 30px;
+
 						&::before {
 							content: "„";
 						}
@@ -786,7 +621,7 @@ p {
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
 	.reviews {
-		&__box {
+		&-box {
 			transform: translateX(0);
 			background-color: #00000088;
 			-webkit-backdrop-filter: blur(50px);
@@ -798,7 +633,7 @@ p {
 /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 	.reviews {
-		&__box {
+		&-box {
 			background-color: #120a09aa;
 
 			&::before {
@@ -814,7 +649,7 @@ p {
 .try {
 	margin-top: 300px;
 
-	&__box {
+	&-box {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
@@ -866,142 +701,25 @@ p {
 	z-index: -1;
 }
 
-.footer {
-	background-color: $gray-extradark;
-	color: white;
-	padding: 50px 0px 70px;
-
-	.row {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-
-		&__column {
-			width: 20%;
-		}
-	}
-
-	a {
-		display: block;
-		width: max-content;
-		color: white;
-		text-decoration: none;
-		font: normal normal 300 16px $font-rubik;
-	}
-
-	address {
-		font: normal normal 300 16px $font-rubik !important;
-	}
-
-	.row {
-		&__column {
-			&-address {
-				a {
-					width: max-content;
-				}
-				img {
-					width: 200px;
-				}
-
-				.socials {
-					margin-top: 20px;
-					display: flex;
-
-					&__link {
-						font-size: 20px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						vertical-align: middle;
-						margin-right: 20px;
-						border: 2px solid white;
-						border-radius: 50px;
-						transition: $transition;
-
-						i {
-							box-sizing: content-box;
-							padding: 6px 4px;
-							margin-bottom: 0px;
-						}
-
-						&:hover {
-							background-color: white;
-							color: $gray-extradark;
-						}
-					}
-				}
-			}
-
-			&-restia {
-				a {
-					text-decoration: underline;
-				}
-			}
-
-			&-contact {
-				.tel:first-of-type {
-					margin-bottom: 20px;
-				}
-			}
-
-			&-heading {
-				display: block;
-				font: normal normal 500 21px $font-rubik;
-				color: $red-medium;
-				padding-bottom: 10px !important;
-			}
-
-			* {
-				margin-bottom: 5px;
-			}
-		}
-	}
-}
-
-
 @media screen and (max-width: 1400px) {
-	.header {
-		&__navbar {
-			&-item {
-				margin-left: 25px;
-			}
-		}
-
-		&__title {
-			&-logo {
-				&-img {
-					height: 26px;
-				}
-
-				&-name {
-					font-size: 20px;
-				}
-			}
-
-			&-description {
-				font-size: 16px;
-			}
-		}
-	}
-
 	.intro {
-		&__video {
+		&-video {
 			top: 100px;
 		}
 	}
 
 	.benefits {
-		&__bag {
+		&-bag {
 			top: 150px;
 		}
 
-		&__tray {
+		&-tray {
 			bottom: 100px;
 		}
 	}
 
 	.features {
-		&__list {
+		&-list {
 			&-item {
 				padding-bottom: 20px;
 
@@ -1029,7 +747,7 @@ p {
 	.try {
 		padding-bottom: 150px;
 
-		&__box {
+		&-box {
 			&-text {
 				width: 75%;
 			}
@@ -1048,41 +766,14 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
-	.header {
-		&__title {
-			width: max-content;
-
-			&-logo {
-				&-img {
-					height: 30px;
-				}
-
-				&-name {
-					font-size: 24px;
-				}
-			}
-
-			&-description {
-				display: none;
-			}
-		}
-
-		&__navbar {
-			width: 70%;
-
-			&-item {
-				margin-left: 50px;
-			}
-		}
-	}
-
 	.intro {
-		&__info {
+		&-info {
 			&-header {
 				&-heading {
 					margin-top: 0;
 				}
 			}
+
 			&-list {
 				&-item {
 					width: 95%;
@@ -1090,8 +781,9 @@ p {
 			}
 		}
 
-		&__video {
+		&-video {
 			top: 0;
+
 			&-button {
 				left: -45px;
 				right: auto;
@@ -1100,7 +792,7 @@ p {
 	}
 
 	.benefits {
-		&__bubbles {
+		&-bubbles {
 			&-bubble {
 				width: 280px;
 				height: 280px;
@@ -1112,17 +804,17 @@ p {
 			}
 		}
 
-		&__bag {
+		&-bag {
 			top: 150px;
 		}
 
-		&__tray {
+		&-tray {
 			bottom: 130px;
 		}
 	}
 
 	.features {
-		&__list {
+		&-list {
 			&-item {
 				width: 48%;
 
@@ -1140,14 +832,14 @@ p {
 			height: 600px;
 		}
 
-		&__box {
+		&-box {
 			width: 60%;
 			height: 60%;
 		}
 	}
 
 	.try {
-		&__box {
+		&-box {
 			&-text {
 				width: 67%;
 			}
@@ -1162,88 +854,6 @@ p {
 }
 
 @media screen and (max-width: 992px) {
-
-	.header {
-		&__navbar {
-			&--large {
-				display: none;
-			}
-
-			&--small {
-				box-shadow: 0 15px 15px #0000000a;
-				display: block;
-				height: 100vh;
-				max-width: 50vw;
-				background-color: white;
-				z-index: 20;
-				position: fixed;
-				top: 0;
-				right: 0;
-				transition: $transition;
-
-				&-items {
-					display: flex;
-					flex-direction: column;
-				}
-
-				&-item {
-					margin-left: 0;
-					padding: 30px;
-					font-size: 24px;
-
-					&-close-button {
-						border: none;
-						background-color: transparent;
-						font-size: 40px !important;
-						align-self: flex-end;
-						margin-bottom: 0;
-
-						&:hover {
-							cursor: pointer;
-							color: $red-medium;
-						}
-					}
-
-					&--outlined {
-						margin: 0 20px;
-						text-align: center;
-					}
-				}
-
-			}
-
-			&-burger {
-				width: 50px;
-				padding: 10px;
-				background-color: transparent;
-				border: none;
-				display: flex;
-				flex-direction: column;
-
-				&:hover {
-					cursor: pointer;
-				}
-
-				span {
-					display: block;
-					width: 100%;
-					height: 4px;
-					background-color: $gray-medium;
-					border-radius: 20px;
-
-					&:nth-child(1) {
-						margin-bottom: 10px;
-					}
-
-					&:nth-child(3) {
-						margin-top: 10px;
-					}
-
-				}
-			}
-		}
-	}
-
 	.intro {
 		padding-top: 225px;
 
@@ -1251,12 +861,12 @@ p {
 			flex-wrap: wrap;
 		}
 
-		&__info {
+		&-info {
 			width: 100%;
 			margin-bottom: 50px;
 		}
 
-		&__video {
+		&-video {
 			position: relative;
 			width: 100%;
 
@@ -1265,6 +875,7 @@ p {
 				aspect-ratio: 16 / 9;
 				height: auto;
 			}
+
 			&-button {
 				top: 360px;
 				left: calc(50% - 45px);
@@ -1274,7 +885,7 @@ p {
 	}
 
 	.benefits {
-		&__bubbles {
+		&-bubbles {
 			flex-wrap: wrap;
 
 			&-bubble {
@@ -1300,7 +911,7 @@ p {
 			}
 		}
 
-		&__buttons {
+		&-buttons {
 			flex-wrap: wrap;
 
 			&-button {
@@ -1312,12 +923,12 @@ p {
 			}
 		}
 
-		&__bag {
+		&-bag {
 			top: 200px;
 			width: 30%;
 		}
 
-		&__tray {
+		&-tray {
 			bottom: 250px;
 			width: 30%;
 		}
@@ -1325,11 +936,12 @@ p {
 
 	.reviews {
 		background-position: center;
-		&__header {
+
+		&-header {
 			padding: 50px;
 		}
 
-		&__box {
+		&-box {
 			width: 100%;
 			height: 50%;
 		}
@@ -1338,7 +950,8 @@ p {
 	.try {
 		margin-top: 200px;
 		padding-bottom: 300px;
-		&__box {
+
+		&-box {
 			flex-direction: column;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -1355,33 +968,11 @@ p {
 			}
 		}
 	}
-
-	.footer {
-		.row {
-			justify-content: center;
-			align-items: stretch;
-			flex-wrap: wrap;
-
-			&__column {
-				width: 50%;
-
-				&:first-of-type {
-					margin-bottom: 30px;
-				}
-
-				&-address {
-					img {
-						width: 150px;
-					}
-				}
-			}
-		}
-	}
 }
 
 @media screen and (max-width: 768px) {
 	.intro {
-		&__video {
+		&-video {
 			height: 350px;
 
 			&-video {
@@ -1395,7 +986,7 @@ p {
 	}
 
 	.benefits {
-		&__bubbles {
+		&-bubbles {
 			height: 580px;
 
 			&::before {
@@ -1427,7 +1018,7 @@ p {
 			}
 		}
 
-		&__bag {
+		&-bag {
 			top: 270px;
 			width: 35%;
 			right: 0;
@@ -1435,14 +1026,14 @@ p {
 			transform: rotateY(180deg);
 		}
 
-		&__tray {
+		&-tray {
 			bottom: 300px;
 			width: 40%;
 		}
 	}
 
 	.features {
-		&__list {
+		&-list {
 			&-item {
 				width: 100%;
 				margin-bottom: 30px;
@@ -1474,14 +1065,16 @@ p {
 		&.i4 {
 			background-image: url("../assets/online/pexels-vlada-karpovich-4050293-small.jpg");
 		}
-		&__header {
+
+		&-header {
 			padding: 30px 50px;
 		}
+
 		.container.body {
 			height: 500px;
 		}
 
-		&__box {
+		&-box {
 			height: 70%;
 		}
 	}
@@ -1489,7 +1082,7 @@ p {
 	.try {
 		padding-bottom: 350px;
 
-		&__box {
+		&-box {
 
 			&-img {
 				width: 65%;
@@ -1507,49 +1100,19 @@ p {
 }
 
 @media screen and (max-width: 576px) {
-
-	.header {
-		height: 100px;
-
-		&__navbar {
-			&-burger {
-				span {
-					height: 3px;
-
-					&:first-child {
-						margin-bottom: 8px;
-					}
-
-					&:last-child {
-						margin-top: 8px;
-					}
-				}
-			}
-
-			&--small {
-				max-width: 70%;
-
-				&-item {
-					font-size: 18px;
-
-					&--outlined {
-						padding: 20px;
-					}
-				}
-			}
-		}
-	}
-
 	.intro {
 		padding-top: 165px;
-		&__video {
+
+		&-video {
 			&-button {
 				right: auto;
 			}
 		}
-		&__info {
+
+		&-info {
 			&-list {
 				margin-left: 2ch;
+
 				&-item {
 					width: 85%;
 					padding-left: 10px;
@@ -1559,7 +1122,7 @@ p {
 	}
 
 	.benefits {
-		&__bubbles {
+		&-bubbles {
 			height: auto;
 			justify-content: center;
 
@@ -1577,13 +1140,13 @@ p {
 			}
 		}
 
-		&__buttons {
+		&-buttons {
 			&-button {
 				margin: 0;
 			}
 		}
 
-		&__bag {
+		&-bag {
 			display: none;
 			top: 12%;
 			left: 0;
@@ -1593,20 +1156,23 @@ p {
 			z-index: 2;
 		}
 
-		&__tray {
+		&-tray {
 			display: none;
 		}
 	}
 
 	.features {
-		&__list {
+		&-list {
 			&-item {
 				overflow: hidden;
+
 				&-header {
 					position: relative;
+
 					&-heading {
 						width: 100%;
 					}
+
 					&-img {
 						position: absolute;
 						top: 30%;
@@ -1615,8 +1181,9 @@ p {
 						filter: grayscale(1) opacity(0.05);
 					}
 				}
+
 				&:hover {
-					.features__list-item-header-img {
+					.features-list-item-header-img {
 						transform: scale(2) !important;
 					}
 				}
@@ -1626,14 +1193,16 @@ p {
 
 	.reviews {
 		margin-top: 100px;
-		&__header {
+
+		&-header {
 			top: 0;
 			margin-bottom: 0;
 			width: 100%;
 		}
 
-		&__box {
+		&-box {
 			height: 85%;
+
 			&-review {
 				figure {
 					blockquote {
@@ -1646,7 +1215,8 @@ p {
 
 	.try {
 		padding-bottom: 250px;
-		&__box {
+
+		&-box {
 			padding: 40px 30px;
 			flex-wrap: nowrap;
 
@@ -1664,6 +1234,7 @@ p {
 					padding: 20px 10px;
 				}
 			}
+
 			&-img {
 				min-width: 200px;
 				margin-bottom: -50%;
@@ -1674,50 +1245,11 @@ p {
 	.table {
 		display: none;
 	}
-
-	.footer {
-
-		.row {
-			flex-direction: column;
-
-			&__column {
-				width: 100%;
-				flex-direction: column;
-				margin-bottom: 20px;
-
-				&-address {
-
-					.socials {
-						margin-top: 0;
-
-						&__link {
-							margin-right: 5px;
-						}
-					}
-				}
-			}
-		}
-	}
-
 }
 
 @media screen and (max-width: 400px) {
-	.header {
-		&__title {
-			&-logo {
-				&-img {
-					height: 24px;
-				}
-
-				&-name {
-					font-size: 20px;
-				}
-			}
-		}
-	}
-
 	.benefits {
-		&__bubbles {
+		&-bubbles {
 			&-bubble {
 				width: 100% !important;
 			}

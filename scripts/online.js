@@ -1,9 +1,7 @@
-const mobileNav = document.querySelector(".header__navbar--small");
-const vid = document.querySelector(".intro__video-video");
-const vidButton = document.querySelector(".intro__video-button");
-const introLine = document.querySelector(".intro__info-list-line");
+const vid = document.querySelector(".intro-video-video");
+const vidButton = document.querySelector(".intro-video-button");
+const introLine = document.querySelector(".intro-info-list-line");
 let carouselCounter = 0;
-let isNavOpen = false;
 
 Object.defineProperty(HTMLMediaElement.prototype, "playing", {
 	get: function() {
@@ -31,22 +29,12 @@ headerResize = () => {
 	if (window.innerWidth > 992) {
 		if (window.pageYOffset > 50) {
 			document.querySelector(".header").style.height = "100px";
-			document.querySelector(".header__title-description").style.opacity = "0";
+			document.querySelector(".header-title-description").style.opacity = "0";
 		} else {
 			document.querySelector(".header").style.height = "150px";
-			document.querySelector(".header__title-description").style.opacity = "1";
+			document.querySelector(".header-title-description").style.opacity = "1";
 		}
 	}
-}
-
-openNav = () => {
-	mobileNav.style.transform = "translateX(0%)"
-	isNavOpen = true;
-}
-
-closeNav = () => {
-	mobileNav.style.transform = "translateX(100%)"
-	isNavOpen = false;
 }
 
 toggleVid = () => {
@@ -64,7 +52,7 @@ toggleVid = () => {
 }
 
 calculateIntroLine = () => {
-	let introHeadings = document.querySelectorAll(".intro__info-list-item-heading");
+	let introHeadings = document.querySelectorAll(".intro-info-list-item-heading");
 	let firstHeadingHeight = introHeadings[0].getBoundingClientRect().top;
 	let lastHeadingHeight = introHeadings[introHeadings.length - 1].getBoundingClientRect().top;
 	let lineHeight = lastHeadingHeight - firstHeadingHeight;
@@ -72,7 +60,7 @@ calculateIntroLine = () => {
 
 }
 
-document.querySelector(".reviews__box").addEventListener("slide.bs.carousel", (e) => {
+document.querySelector(".reviews-box").addEventListener("slide.bs.carousel", (e) => {
 	document.querySelector(".reviews").classList.add("transitioning");
 	if (e.direction === "left") {
 		carouselCounter--;
@@ -90,7 +78,7 @@ document.querySelector(".reviews__box").addEventListener("slide.bs.carousel", (e
 })
 
 const parallax = (e) => {
-	document.querySelectorAll(".benefits__bubbles-bubble").forEach((element) => {
+	document.querySelectorAll(".benefits-bubbles-bubble").forEach((element) => {
 		let parallaxValue = element.getAttribute("data-parallax");
 		let coordX = (e.clientX * parallaxValue) / 250;
 		let coordY = (e.clientY * parallaxValue) / 250;
