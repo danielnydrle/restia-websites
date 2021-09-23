@@ -7,8 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<link rel="stylesheet" href="./styles/bs.css">
-	<link rel="stylesheet" href="./styles/online.css">
+	<link rel="stylesheet" href="./styles/bs.min.css">
+	<link rel="stylesheet" href="./styles/online.min.css">
+	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 	<title>Restia Online</title>
 </head>
 
@@ -16,11 +17,13 @@
 	<header class="header">
 		<div class="header-container container">
 			<div class="header-title">
-				<a href="index.html" class="header-title-logo">
-					<img class="header-title-logo-img"
-						src="https://restia.cz/wp-content/uploads/2019/04/Restia-logo.svg" alt="RESTIA">
-					<span class="header-title-logo-name">ONLINE</span>
-				</a>
+				<div href="index.html" class="header-title-logo">
+					<a href="index.html" class="header-title-logo-link">
+						<img class="header-title-logo-link-img"
+							src="https://restia.cz/wp-content/uploads/2019/04/Restia-logo.svg" alt="RESTIA">
+					</a>
+					<a href="#" class="header-title-logo-name">ONLINE</a>
+				</div>
 				<span class="header-title-description">
 					Chytrý <b>online objednávkový systém</b> pro vaši restauraci
 				</span>
@@ -31,14 +34,14 @@
 				<a href="#"
 					class="header-navbar-item header-navbar-item--outlined header-navbar--large-item header-navbar--large-item--outlined">Objednat</a>
 			</nav>
-			<button class="header-navbar-burger" onclick="openNav()">
+			<button class="header-navbar-burger" onclick="openNav()" aria-label="Otevřít menu">
 				<span></span><span></span><span></span>
 			</button>
 			<nav class="header-navbar header-navbar--small is-closed">
 				<div class="header-navbar--small-items">
 					<button
 						class="header-navbar-item header-navbar--small-item header-navbar--small-item-close-button"
-						onclick="closeNav()">&times;</button>
+						onclick="closeNav()" aria-label="Zavřít menu">&times;</button>
 					<a href="#" class="header-navbar-item header-navbar--small-item">FAQ</a>
 					<a href="#" class="header-navbar-item header-navbar--small-item">Kontakty</a>
 					<a href="#"
@@ -72,31 +75,34 @@
 							<p class="intro-info-list-item-description">Host přijde k Vašemu stolu a sám si chce objednat z mobilu či tabletu. Nechce čekat na číšníka nebo má rád soukromí.</p>
 						</li>
 					</ul>
-					<button class="button button--outlined intro-info-button">VYZKOUŠET DEMO VERZI</button>
+					<button class="button button--outlined intro-info-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+						<span class="button-text">VYZKOUŠET DEMO VERZI</span>
+						<i class="fas fa-chevron-right button-arrow"></i>
+					</button>
 				</div>
 				<div class="intro-video">
 					<video class="intro-video-video" autoplay loop muted src="https://ak.picdn.net/shutterstock/videos/1052428162/preview/stock-footage-time-lapse-of-soft-clouds-moving-in-a-blue-sky-basque-country-of-france-hd-x-fps.webm"></video>
-					<button class="button button--full intro-video-button" onclick="toggleVid()"><i class="fas fa-pause"></i></button>
+					<button class="button button--full intro-video-button" onclick="toggleVid()" aria-label="Přepnout video"><i class="fas fa-pause"></i></button>
 				</div>
 			</div>
 		</section>
 		<section class="clients">
 			<div class="clients-carousel">
-				<img class="clients-store" src="./assets/dispecink/Group 599.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 604.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 607.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 609.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 611.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 615.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Skútr.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-BK.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-GETFOOD.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-YAMYAM.svg" alt="">
 
-				<img class="clients-store" src="./assets/dispecink/Group 599.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 604.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 607.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 609.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 611.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Group 615.svg" alt="">
-				<img class="clients-store" src="./assets/dispecink/Skútr.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-BK.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-GETFOOD.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-YAMYAM.svg" alt="">
+
+				<img class="clients-store" src="./assets/dispecink/logo-BK.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-GETFOOD.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-YAMYAM.svg" alt="">
+
+				<img class="clients-store" src="./assets/dispecink/logo-BK.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-GETFOOD.svg" alt="">
+				<img class="clients-store" src="./assets/dispecink/logo-YAMYAM.svg" alt="">
 			</div>
 		</section>
 		<section class="benefits">
@@ -119,8 +125,14 @@
 				</div>
 			</div>
 			<div class="benefits-buttons container">
-				<button class="button button--full benefits-buttons-button">OBJEDNEJTE SI KONZULTACI ZDARMA</button>
-				<button class="button button--outlined benefits-buttons-button">VYZKOUŠET DEMO VERZI</button>
+				<button class="button button--full benefits-buttons-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+					<span class="button-text">OBJEDNEJTE SI KONZULTACI ZDARMA</span>
+					<i class="fas fa-chevron-right button-arrow"></i>
+				</button>
+				<button class="button button--outlined benefits-buttons-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+					<span class="button-text">VYZKOUŠET DEMO VERZI</span>
+					<i class="fas fa-chevron-right button-arrow"></i>
+				</button>
 			</div>
 			<img src="./assets/online/taska.png" alt="" class="benefits-bag">
 			<img src="./assets/online/tac.png" alt="" class="benefits-tray">
@@ -136,42 +148,42 @@
 				<div class="features-list">
 					<div class="features-list-item">
 						<header class="features-list-item-header">
-							<img src="./assets/online/rychla-instalace.svg" alt="Rychlá instalace" class="features-list-item-header-img">
+							<img src="./assets/online/icon-instalace.svg" alt="Rychlá instalace" class="features-list-item-header-img">
 							<h3 class="features-list-item-header-heading">Rychlá instalace</h3>
 						</header>
 						<p class="features-list-item-description">Základní verzi můžete mít na webu ještě dnes.</p>
 					</div>
 					<div class="features-list-item">
 						<header class="features-list-item-header">
-							<img src="./assets/online/bez-smlouvy.svg" alt="Bez smlouvy" class="features-list-item-header-img">
+							<img src="./assets/online/icon-smlouva.svg" alt="Bez smlouvy" class="features-list-item-header-img">
 							<h3 class="features-list-item-header-heading">Bez smlouvy</h3>
 						</header>
 						<p class="features-list-item-description">Platíte jednoduché měsíční fee. Nic víc.</p>
 					</div>
 					<div class="features-list-item">
 						<header class="features-list-item-header">
-							<img src="./assets/online/mate-web.svg" alt="Ať máte jakýkoli web" class="features-list-item-header-img">
+							<img src="./assets/online/icon-mate.svg" alt="Ať máte jakýkoli web" class="features-list-item-header-img">
 							<h3 class="features-list-item-header-heading">Ať máte jakýkoli web</h3>
 						</header>
 						<p class="features-list-item-description">Restia kamárádí s každým webem. Snadno se přizpůsobí.</p>
 					</div>
 					<div class="features-list-item">
 						<header class="features-list-item-header">
-							<img src="./assets/online/budoucnost-zacina-ted.svg" alt="Budoucnost začíná teď" class="features-list-item-header-img">
+							<img src="./assets/online/icon-budoucnost.svg" alt="Budoucnost začíná teď" class="features-list-item-header-img">
 							<h3 class="features-list-item-header-heading">Budoucnost začíná teď</h3>
 						</header>
 						<p class="features-list-item-description">Online se stává samozřejmostí. Restia Vám dává náskok.</p>
 					</div>
 					<div class="features-list-item">
 						<header class="features-list-item-header">
-							<img src="./assets/online/nemate-web.svg" alt="I když zatím nemáte web" class="features-list-item-header-img">
+							<img src="./assets/online/icon-nemate.svg" alt="I když zatím nemáte web" class="features-list-item-header-img">
 							<h3 class="features-list-item-header-heading">I když zatím nemáte web</h3>
 						</header>
 						<p class="features-list-item-description">Za 1 h Vám v Restii vytvoříme jednoduché stránky.</p>
 					</div>
 					<div class="features-list-item">
 						<header class="features-list-item-header">
-							<img src="./assets/online/nase-triky.svg" alt="Ukáže Vám svoje trinky" class="features-list-item-header-img">
+							<img src="./assets/online/icon-triky.svg" alt="Ukáže Vám svoje trinky" class="features-list-item-header-img">
 							<h3 class="features-list-item-header-heading">Ukáže Vám svoje triky</h3>
 						</header>
 						<p class="features-list-item-description">Restia umí mnohem víc. Třeba kasu nebo rozvoz. Je to na Vás.</p>
@@ -199,10 +211,10 @@
 						<button class="reviews-box-indicators-indicator" type="button" data-bs-target="#carousel" data-bs-slide-to="4"
 							aria-label="Recenze 5"></button>
 					</ul>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+					<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev" aria-label="Předchozí recenze">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+					<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next" aria-label="Následující recenze">
 						<div class="carousel-control-next-icon" aria-hidden="true"></div>
 					</button>
 					<div class="carousel-inner">
@@ -262,9 +274,12 @@
 							Nemáme žádné skryté poplatky<br />
 							a hrajeme fér
 						</p>
-						<a href="" class="button button--inverted try-box-text-button">RYCHLÁ KONZULTACE ZDARMA</a>
+						<a href="" class="button button--inverted try-box-text-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+							<span class="button-text">RYCHLÁ KONZULTACE ZDARMA</span>
+							<i class="fas fa-chevron-right button-arrow"></i>
+						</a>
 					</div>
-					<img src="./assets/online/Group 618.png" alt="Vyzkoušejte Restii ONLINE už od 990 Kč měsíčně." class="try-box-img">
+					<img src="./assets/online/phone.png" alt="Vyzkoušejte Restii ONLINE už od 990 Kč měsíčně." class="try-box-img">
 				</article>
 			</div>
 		</section>
@@ -275,7 +290,7 @@
 			<div class="row-column row-column-address">
 				<div class="left">
 					<a href="index.html">
-						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="">
+						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="Restia">
 					</a>
 					<address>
 						Americká 662/70<br />
@@ -287,10 +302,11 @@
 				</div>
 				<div class="right">
 					<div class="socials">
-						<a href="#" class="socials-link"><i class="fab fa-fw fa-facebook-f"></i></a>
-						<a href="#" class="socials-link"><i class="fab fa-fw fa-instagram"></i></a>
-						<a href="#" class="socials-link"><i class="fas fa-fw fa-rss"></i></a>
-						<a href="#" class="socials-link"><i class="fab fa-fw fa-google-plus-g"></i></a>
+						<a href="https://www.facebook.com/Restia-servis-105106031204049/" class="socials-link"
+							aria-label="Restia Facebook"><i class="fab fa-fw fa-facebook-f"></i></a>
+						<a href="#" class="socials-link" aria-label="Restia Instagram"><i class="fab fa-fw fa-instagram"></i></a>
+						<a href="#" class="socials-link" aria-label="Restia Newsletter"><i class="fas fa-fw fa-rss"></i></a>
+						<a href="#" class="socials-link" aria-label="Restia Google+"><i class="fab fa-fw fa-google-plus-g"></i></a>
 					</div>
 				</div>
 			</div>
@@ -326,6 +342,30 @@
 				<a class="tel" href="tel:+420777931661">+420 777 931 661</a>
 			</div>
 	</footer>
+
+	<div class="demo modal fade" id="demo-modal" tabindex="-1" role="dialog" aria-hidden="true"
+	data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="demo-dialog modal-dialog modal-dialog-centered" role="document">
+		<div class="demo-content modal-content">
+			<button class="demo-close-button" data-bs-dismiss="modal" aria-label="Zavřít">&times;</button>
+			<h2 class="demo-heading">Vyzkoušet <span class="is-red">DEMO</span> VERZI</h2>
+			<p>Podívejte se, jak by mohly vypadat Vaše online objednávky</p>
+			<a href="#" class="button button--full">
+				<div class="button-text">UKÁZKA ONLINE OBJEDNÁVEK</div>
+				<i class="fas fa-chevron-right button-arrow"></i>
+			</a>
+			<p>Chci si vyzkoušet, jak jednoduchá je administrace</p>
+			<small>Vyplňte prosím e-mail, na který Vám zašleme Vaše přihlašovací údaje</small>
+			<form class="demo-form" action="">
+				<input class="demo-form-email" type="email" name="" id="" placeholder="Váš e-mail"
+					onkeyup="validateEmail()">
+				<input class="demo-form-submit button button--outlined disabled" type="submit" value="ODESLAT"
+					disabled="true">
+			</form>
+		</div>
+	</div>
+</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 	</script>

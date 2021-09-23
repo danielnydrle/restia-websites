@@ -2,68 +2,252 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link rel="stylesheet" href="./styles/agregator.css">
-    <title>Restia Agregator</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="./styles/bs.min.css">
+	<link rel="stylesheet" href="./styles/agregator.min.css">
+	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+	<title>Restia Agregator</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-container container">
-            <div class="header-title">
-                <a href="index.html" class="header-title-logo">
-                    <img class="header-title-logo-img"
-                        src="https://restia.cz/wp-content/uploads/2019/04/Restia-logo.svg" alt="RESTIA">
-                    <span class="header-title-logo-name">AGREGATOR</span>
-                </a>
-                <span class="header-title-description">
-                    Všechny <b>online objednávky</b> vaší restaurace <b>na jednom místě</b>
-                </span>
-            </div>
-            <nav class="header-navbar header-navbar--large">
-                <a href="#" class="header-navbar-item header-navbar--large-item">Další služby Restia</a>
-                <a href="#" class="header-navbar-item header-navbar--large-item">FAQ</a>
-                <a href="#" class="header-navbar-item header-navbar--large-item">Kontakty</a>
-                <a href="#"
-                    class="header-navbar-item header-navbar-item--outlined header-navbar--large-item header-navbar--large-item--outlined">Objednat</a>
-            </nav>
-            <button class="header-navbar-burger" onclick="openNav()">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="header-navbar header-navbar--small is-closed">
-                <div class="header-navbar--small-items">
-                    <button class="header-navbar-item header-navbar--small-item header-navbar--small-item-close-button"
-                        onclick="closeNav()">&times;</button>
-                    <a href="#" class="header-navbar-item header-navbar--small-item">Další služby Restia</a>
-                    <a href="#" class="header-navbar-item header-navbar--small-item">FAQ</a>
-                    <a href="#" class="header-navbar-item header-navbar--small-item">Kontakty</a>
-                    <a href="#"
-                        class="header-navbar-item header-navbar--small-item header-navbar-item--outlined  header-navbar--small-item--outlined">Objednat</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-
+	<header class="header">
+		<div class="header-container container">
+			<div class="header-title">
+				<div href="index.html" class="header-title-logo">
+					<a href="index.html" class="header-title-logo-link">
+						<img class="header-title-logo-link-img"
+							src="https://restia.cz/wp-content/uploads/2019/04/Restia-logo.svg" alt="RESTIA">
+					</a>
+					<a href="#" class="header-title-logo-name">AGREGATOR</a>
+				</div>
+				<span class="header-title-description">
+					Všechny <b>online objednávky</b> vaší restaurace <b>na jednom místě</b>
+				</span>
+			</div>
+			<nav class="header-navbar header-navbar--large">
+				<a href="#" class="header-navbar-item header-navbar--large-item">FAQ</a>
+				<a href="#" class="header-navbar-item header-navbar--large-item">Kontakty</a>
+				<a href="#"
+					class="header-navbar-item header-navbar-item--outlined header-navbar--large-item header-navbar--large-item--outlined">Objednat</a>
+			</nav>
+			<button class="header-navbar-burger" onclick="openNav()" aria-label="Otevřít menu">
+				<span></span><span></span><span></span>
+			</button>
+			<nav class="header-navbar header-navbar--small is-closed">
+				<div class="header-navbar--small-items">
+					<button class="header-navbar-item header-navbar--small-item header-navbar--small-item-close-button"
+						onclick="closeNav()" aria-label="Zavřít menu">&times;</button>
+					<a href="#" class="header-navbar-item header-navbar--small-item">Další služby Restia</a>
+					<a href="#" class="header-navbar-item header-navbar--small-item">FAQ</a>
+					<a href="#" class="header-navbar-item header-navbar--small-item">Kontakty</a>
+					<a href="#"
+						class="header-navbar-item header-navbar--small-item header-navbar-item--outlined  header-navbar--small-item--outlined">Objednat</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section class="intro">
+			<div class="container">
+				<div class="intro-text">
+					<h1 class="intro-text-heading">
+						ZJEDNODUŠTE SI PRÁCI S <b>ONLINE OBJEDNÁVKAMI</b> ZE VŠECH ZDROJŮ
+					</h1>
+					<span class="intro-text-description">Jedno kliknutí a <b>víte vše</b>:</span>
+					<div class="intro-text-features">
+						<div class="intro-text-features-feature">
+							<span class="intro-text-features-feature-text"><b>Které</b> objednávky se připravují a které expedujete</span>
+						</div>
+						<div class="intro-text-features-feature">
+							<span class="intro-text-features-feature-text"><b>Kdo</b> si jídlo objednal a kdy ho očekává</span>
+						</div>
+						<div class="intro-text-features-feature">
+							<span class="intro-text-features-feature-text"><b>Kudy</b> vaši řidiči rozvážejí a <b>kdy</b> budou zpět</span>
+						</div>
+					</div>
+					<button class="button button--inverted intro-text-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+						<span class="button-text">OBJEDNEJTE SI KONZULTACI ZDARMA</span>
+						<i class="fas fa-chevron-right button-arrow"></i>
+					</button>
+				</div>
+				<div class="intro-clients">
+					<div class="intro-clients-logos">
+						<img src="./assets/agregator/logo-bolt.png" alt="Bolt" class="intro-clients-logos-logo intro-clients-logos-logo--bolt rellax" data-rellax-speed="-4">
+						<img src="./assets/agregator/logo-dj.svg" alt="Dáme jídlo" class="intro-clients-logos-logo intro-clients-logos-logo--dj rellax" data-rellax-speed="-4">
+						<img src="./assets/agregator/logo-telefon.svg" alt="telefon" class="intro-clients-logos-logo intro-clients-logos-logo--phone rellax" data-rellax-speed="-4">
+						<img src="./assets/agregator/logo-online.svg" alt="RESTIA Online" class="intro-clients-logos-logo intro-clients-logos-logo--online rellax" data-rellax-speed="-3">
+						<img src="./assets/agregator/logo-wolt.png" alt="Wolt" class="intro-clients-logos-logo intro-clients-logos-logo--wolt rellax" data-rellax-speed="-4">
+						<img src="./assets/agregator/logo-woo.svg" alt="Woo" class="intro-clients-logos-logo intro-clients-logos-logo--woo rellax" data-rellax-speed="-3">
+						<img src="./assets/agregator/logo-pikolik.svg" alt="Pikolík" class="intro-clients-logos-logo intro-clients-logos-logo--pikolik rellax" data-rellax-speed="-3">
+					</div>
+					<img src="./assets/agregator/funnel.svg" alt="" class="intro-clients-funnel">
+					<div class="path">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="process">
+			<div class="container">
+				<header class="process-header">
+					<h2 class="process-header-heading">
+						<b>JEDNA APLIKACE</b> NAHRADÍ VŠECHNY OSTATNÍ
+					</h2>
+					<span class="process-header-description">Restii Agregator jsme pro vás vyvinuli v reálných restauracích. Funguje jako geniální provozní, o kterém odjakživa sníte.</span>
+				</header>
+				<div class="process-list">
+					<div class="process-list-item">
+						<img src="./assets/agregator/icon-prijima.svg" alt="Přijímá" class="process-list-item-icon inactive">
+						<h3 class="process-list-item-heading">Přijímá</h3>
+						<span class="process-list-item-description">Z webů. Z telefonů. Vše na jednom místě.</span>
+					</div>
+					<div class="process-list-item">
+						<img src="./assets/agregator/icon-potvrzuje.svg" alt="Potvrzuje" class="process-list-item-icon inactive">
+						<h3 class="process-list-item-heading">Potvrzuje</h3>
+						<span class="process-list-item-description">Automaticky a hned. 24 hodin denně.</span>
+					</div>
+					<div class="process-list-item">
+						<img src="./assets/agregator/icon-zpracovava.svg" alt="Zpracovává" class="process-list-item-icon inactive">
+						<h3 class="process-list-item-heading">Zpracovává</h3>
+						<span class="process-list-item-description">Pošle objednávku do kuchyně. Hlídá čas i suroviny.</span>
+					</div>
+					<div class="process-list-item">
+						<img src="./assets/agregator/icon-expeduje.svg" alt="Expeduje" class="process-list-item-icon inactive">
+						<h3 class="process-list-item-heading">Expeduje</h3>
+						<span class="process-list-item-description">Ví, kam co půjde, a má v tom systém.</span>
+					</div>
+					<div class="process-list-item">
+						<img src="./assets/agregator/icon-rozvazi.svg" alt="Rozváží" class="process-list-item-icon inactive">
+						<h3 class="process-list-item-heading">Rozváží</h3>
+						<span class="process-list-item-description">Naplánuje trasy. Komunikuje za řidiče.</span>
+					</div>
+					<div class="process-list-item">
+						<img src="./assets/agregator/icon-podekuje.svg" alt="Poděkuje" class="process-list-item-icon inactive">
+						<h3 class="process-list-item-heading">Poděkuje</h3>
+						<span class="process-list-item-description">... a rozešle žádost o hodnocení.</span>
+					</div>
+				</div>
+				<div class="process-button button button--full" data-bs-toggle="modal" data-bs-target="#demo-modal">
+					<span class="button-text">OBJEDNEJTE SI KONZULTACI ZDARMA</span>
+					<i class="fas fa-chevron-right button-arrow"></i>
+				</div>
+			</div>
+		</section>
+		<section class="features">
+			<header class="features-header container">
+				<h2 class="features-header-heading">MÁTE <b>VLASTNÍ ROZVOZ?</b></h2>
+				<span class="features-header-description"><b>Restia Agregator</b> ho dokonale zorganizuje za
+					vás</span>
+			</header>
+			<div class="features-body">
+				<div class="features-body-box">
+					<h3 class="features-body-box-heading">Chytře a efektivně:</h3>
+					<ul class="features-body-box-list">
+						<li class="features-body-box-list-item">Plánuje trasy</li>
+						<li class="features-body-box-list-item">Naviguje</li>
+						<li class="features-body-box-list-item">Hlídá řidiče</li>
+						<li class="features-body-box-list-item">Rozesílá SMS zákazníkům</li>
+						<li class="features-body-box-list-item">Řídí vozový park</li>
+						<li class="features-body-box-list-item">Sbírá hodnocení</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="people">
+			<div class="container">
+				<header class="people-header">
+					<h2 class="people-header-heading">
+						<b>SPOKOJENOST</b> NA VŠECH STRANÁCH
+					</h2>
+					<span class="people-header-description">
+						Každý z vašich lidí bude mít jiný <b>důvod</b> Restia Agregator <b>milovat</b>
+					</span>
+				</header>
+				<div class="people-list">
+					<div class="people-list-person">
+						<h3 class="people-list-person-heading">VÁŠ ZÁKAZNÍK</h3>
+						<div class="people-list-person-body">
+							<ul class="people-list-person-body-list">
+								<li class="people-list-person-body-list-item">Dostane své jídlo včas.</li>
+								<li class="people-list-person-body-list-item">Dostane SMS zprávu, že se kurýr blíží.
+								</li>
+								<li class="people-list-person-body-list-item">Má informaci, kolik peněz si připravit.
+								</li>
+								<li class="people-list-person-body-list-item">Může se vrátit ke svým předchozím
+									objednávkám.</li>
+								<li class="people-list-person-body-list-item">Může objednanou službu ohodnotit.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="people-list-person">
+						<h3 class="people-list-person-heading">VY</h3>
+						<div class="people-list-person-body">
+							<ul class="people-list-person-body-list">
+								<li class="people-list-person-body-list-item">Máte 100% přehled. O financích, stavu
+									objednávek i zákaznících.</li>
+								<li class="people-list-person-body-list-item">Víte včas, kolik vyplatit kurýrům.</li>
+								<li class="people-list-person-body-list-item">Víte přesně, kudy kurýři jezdí.</li>
+								<li class="people-list-person-body-list-item">Máte provoz propojený s pokladnami.</li>
+								<li class="people-list-person-body-list-item">Hodnocení zákazníků znáte hned.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="people-list-person">
+						<h3 class="people-list-person-heading">VÁŠ KURÝR</h3>
+						<div class="people-list-person-body">
+							<ul class="people-list-person-body-list">
+								<li class="people-list-person-body-list-item">Má přehledně na jednom místě  všechny
+									informace o objednávkách.</li>
+								<li class="people-list-person-body-list-item">Vidí plán své trasy i čas, kdy mají být
+									jídla doručena.</li>
+								<li class="people-list-person-body-list-item">Může zákazníkovi poslat SMS, že se blíží.
+								</li>
+								<li class="people-list-person-body-list-item">Ví přesně, kolik vám má po směně odevzdat
+									peněz.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="try">
+			<div class="container">
+				<article class="try-box">
+					<div class="try-box-text">
+						<h2 class="try-box-text-heading">
+							Vyzkoušejte Restia DISPEČINK už <b>od 990 Kč měsíčně.</b>
+						</h2>
+						<p class="try-box-text-para">
+							Nemáme žádné skryté poplatky<br />
+							a hrajeme fér
+						</p>
+						<a href="" class="button button--inverted try-box-text-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+							<span class="button-text">RYCHLÁ KONZULTACE ZDARMA</span>
+							<i class="fas fa-chevron-right button-arrow"></i>
+						</a>
+					</div>
+					<img src="./assets/agregator/tablet.png" alt="" class="try-box-img">
+				</article>
+			</div>
+		</section>
 		<section class="questions">
 			<div class="container">
+				<h2 class="questions-heading">NA CO <b>SE CHCETE ZEPTAT</b>?</h2>
 				<div class="questions-item is-closed">
-					<button class="questions-item-question questions-item-question--1">Kolik tabletů v provozu
-						potřebujeme?</button>
-					<p class="questions-item-answer questions-item-answer--1">Lorem ipsum dolor, sit amet
-						consectetur
-						adipisicing
-						elit. Debitis
-						odio quibusdam magni, obcaecati praesentium itaque ipsum, culpa ex expedita excepturi quam
-						nostrum mollitia maxime repudiandae aliquam similique? Aliquam, illo ratione.</p>
+					<button class="questions-item-question questions-item-question--1">
+						Jak v kuchyni poznám, co je ke stolu, co k vyzvednutí?
+					</button>
+					<p class="questions-item-answer questions-item-answer--1">
+						Tato informace se propíše na lístek objednávky, kde najdete mimo jiné také možné poznámky k jídlu, které vám zanechal sám zákazník.
+					</p>
 				</div>
 				<div class="questions-item is-closed">
-					<button class="questions-item-question questions-item-question--2">Kolik tabletů v provozu
-						potřebujeme?</button>
+					<button class="questions-item-question questions-item-question--2">
+						Jak rychle se naučím se systémy pracovat?
+					</button>
 					<p class="questions-item-answer questions-item-answer--2">Lorem ipsum, dolor sit amet
 						consectetur
 						adipisicing
@@ -72,8 +256,9 @@
 						reiciendis? Eligendi dolorem nobis in consequatur suscipit, aperiam repellat!</p>
 				</div>
 				<div class="questions-item is-closed">
-					<button class="questions-item-question questions-item-question--3">Kolik tabletů v provozu
-						potřebujeme?</button>
+					<button class="questions-item-question questions-item-question--3">
+						Kolik tabletů v provozu potřebujeme?
+					</button>
 					<p class="questions-item-answer questions-item-answer questions-item-answer--3">Lorem
 						ipsum dolor
 						sit amet
@@ -84,15 +269,15 @@
 				</div>
 			</div>
 		</section>
-    </main>
+	</main>
 	<footer class="footer">
-		<img class="footer-img footer-img-building" src="./assets/dispecink/Group 604.svg" alt="">
-		<img class="footer-img footer-img-scooter" src="./assets/dispecink/Skutr.svg" alt="">
+		<img class="footer-img footer-img-building" src="./assets/dispecink/building.svg" alt="">
+		<img class="footer-img footer-img-scooter" src="./assets/dispecink/scooter.svg" alt="">
 		<div class="container row">
 			<div class="row-column row-column-address">
 				<div class="left">
 					<a href="index.html">
-						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="">
+						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="Restia">
 					</a>
 					<address>
 						Americká 662/70<br />
@@ -104,10 +289,11 @@
 				</div>
 				<div class="right">
 					<div class="socials">
-						<a href="#" class="socials-link"><i class="fab fa-fw fa-facebook-f"></i></a>
-						<a href="#" class="socials-link"><i class="fab fa-fw fa-instagram"></i></a>
-						<a href="#" class="socials-link"><i class="fas fa-fw fa-rss"></i></a>
-						<a href="#" class="socials-link"><i class="fab fa-fw fa-google-plus-g"></i></a>
+						<a href="https://www.facebook.com/Restia-servis-105106031204049/" class="socials-link"
+							aria-label="Restia Facebook"><i class="fab fa-fw fa-facebook-f"></i></a>
+						<a href="#" class="socials-link" aria-label="Restia Instagram"><i class="fab fa-fw fa-instagram"></i></a>
+						<a href="#" class="socials-link" aria-label="Restia Newsletter"><i class="fas fa-fw fa-rss"></i></a>
+						<a href="#" class="socials-link" aria-label="Restia Google+"><i class="fab fa-fw fa-google-plus-g"></i></a>
 					</div>
 				</div>
 			</div>
@@ -144,10 +330,33 @@
 			</div>
 	</footer>
 
-	
+	<div class="demo modal fade" id="demo-modal" tabindex="-1" role="dialog" aria-hidden="true"
+		data-bs-backdrop="static" data-bs-keyboard="false">
+		<div class="demo-dialog modal-dialog modal-dialog-centered" role="document">
+			<div class="demo-content modal-content">
+				<button class="demo-close-button" data-bs-dismiss="modal" aria-label="Zavřít">&times;</button>
+				<h2 class="demo-heading">Vyzkoušet <span class="is-red">DEMO</span> VERZI</h2>
+				<p>Podívejte se, jak by mohly vypadat Vaše online objednávky</p>
+				<a href="#" class="button button--full">
+					<div class="button-text">UKÁZKA ONLINE OBJEDNÁVEK</div>
+					<i class="fas fa-chevron-right button-arrow"></i>
+				</a>
+				<p>Chci si vyzkoušet, jak jednoduchá je administrace</p>
+				<small>Vyplňte prosím e-mail, na který Vám zašleme Vaše přihlašovací údaje</small>
+				<form class="demo-form" action="">
+					<input class="demo-form-email" type="email" name="" id="" placeholder="Váš e-mail"
+						onkeyup="validateEmail()">
+					<input class="demo-form-submit button button--outlined disabled" type="submit" value="ODESLAT"
+						disabled="true">
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 	</script>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 	<script src="https://kit.fontawesome.com/5877601269.js" crossorigin="anonymous"></script>
 	<script src="./scripts/burger.js"></script>
 	<script src="./scripts/header.js"></script>

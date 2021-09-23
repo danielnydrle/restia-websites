@@ -19,9 +19,90 @@ section {
   padding: 100px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
   }
 }
 :root {
@@ -42,9 +123,90 @@ section {
   padding: 100px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
   }
 }
 .header {
@@ -79,19 +241,20 @@ section {
   align-items: center;
   text-decoration: none;
 }
-.header-title-logo-img {
+.header-title-logo-link-img {
   height: 30px;
   width: auto;
 }
 .header-title-logo-name {
   display: block;
-  margin-left: 5px;
   font: normal small-caps 500 24px "Rubik", sans-serif;
+  text-decoration: none;
   color: #830A0F;
+  margin-left: 8px;
 }
 .header-title-description {
-  font: normal normal 300 18px "Rubik", sans-serif;
   display: block;
+  font: normal normal 300 18px "Rubik", sans-serif;
   transition: all 0.3s ease-in-out;
 }
 .header-title-description b {
@@ -133,7 +296,7 @@ section {
   .header-navbar-item {
     margin-left: 25px;
   }
-  .header-title-logo-img {
+  .header-title-logo-link-img {
     height: 26px;
   }
   .header-title-logo-name {
@@ -151,7 +314,7 @@ section {
   .header-title {
     width: max-content;
   }
-  .header-title-logo-img {
+  .header-title-logo-link-img {
     height: 30px;
   }
   .header-title-logo-name {
@@ -215,11 +378,11 @@ section {
     transform: translateX(100%);
   }
   .header-navbar-burger {
-    width: 50px;
+    display: flex !important;
+    width: 60px !important;
     padding: 10px;
     background-color: transparent;
     border: none;
-    display: flex;
     flex-direction: column;
   }
   .header-navbar-burger:hover {
@@ -243,8 +406,11 @@ section {
   .header {
     height: 100px;
   }
+  .header-navbar-burger {
+    width: 52px !important;
+  }
   .header-navbar-burger span {
-    height: 3px;
+    height: 4px;
   }
   .header-navbar-burger span:first-child {
     margin-bottom: 8px;
@@ -263,7 +429,7 @@ section {
   }
 }
 @media screen and (max-width: 400px) {
-  .header-title-logo-img {
+  .header-title-logo-link-img {
     height: 24px;
   }
   .header-title-logo-name {
@@ -288,9 +454,90 @@ section {
   padding: 100px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
   }
 }
 .footer {
@@ -416,11 +663,21 @@ section {
   }
 }
 :root {
-  font-family: "Rubik", sans-serif !important;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 1px;
 }
 
-h2 {
-  font: normal small-caps 400 40px "Rubik", sans-serif;
+html,
+body,
+main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 0;
 }
 
 .button {
@@ -429,36 +686,41 @@ h2 {
   align-items: center;
   text-align: center;
   margin-top: 50px;
-  padding: 28px;
+  padding: 28px 0;
+  width: 404px;
   overflow: none;
   border-radius: 100px;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
   font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
   transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
 }
 .button--full {
   background-color: #C30010 !important;
   color: white !important;
   border: none !important;
 }
-.button--full:hover {
-  background-color: #E10819 !important;
-}
 .button--outlined {
   background-color: white;
   color: #C30010 !important;
   border: 1px solid #C30010;
 }
-.button--outlined:hover {
-  background-color: #C30010;
-  color: white !important;
-}
 .button--outlined.enabled {
   background-color: #C30010;
   color: white !important;
-}
-.button--outlined.enabled:hover {
-  background-color: #E10819;
 }
 .button--outlined.disabled {
   background-color: white;
@@ -466,12 +728,195 @@ h2 {
   border: 1px solid #C30010;
 }
 .button--outlined.disabled:hover {
-  background-color: inherit;
-  color: inherit;
   cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
 }
 .button:hover {
   cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
+  }
+}
+.demo {
+  padding-right: 0 !important;
+  overflow: auto;
+}
+.demo-dialog {
+  max-width: 40vw;
+}
+.demo-content {
+  position: relative;
+  padding: 30px 50px;
+  border-radius: 20px;
+  border: 2px solid #919191;
+  box-shadow: 0px 8px 10px #00000029;
+}
+.demo-content * {
+  text-align: center;
+}
+.demo-close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: #707070;
+  transition: all 0.3s ease-in-out;
+}
+.demo-close-button:hover {
+  cursor: pointer;
+  color: #C30010;
+}
+.demo-heading {
+  background-image: linear-gradient(#ffffff88, white), url("../assets/home/demo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100% + 60px);
+  margin: -30px;
+  margin-bottom: 0px;
+  padding: 50px 30px;
+  font: normal normal 600 30px "Rubik", sans-serif;
+  color: #4E4E4E;
+  border-radius: 20px 20px 0 0;
+}
+.demo-heading .is-red {
+  color: #C30010;
+}
+.demo p {
+  font-weight: 500;
+}
+.demo .button--full {
+  margin: 20px auto;
+}
+.demo small {
+  font: normal italic 300 16px "Rubik", sans-serif;
+  color: #919191;
+}
+.demo-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.demo-form-email {
+  width: 70%;
+  padding: 16px;
+  border: 1px solid #CACACA;
+  border-radius: 50px;
+  text-align: left;
+  font: normal normal 300 16px "Rubik", sans-serif;
+  color: #4E4E4E;
+  transition: all 0.3s ease-in-out;
+}
+.demo-form-email::placeholder {
+  text-align: left;
+  color: #919191;
+}
+.demo-form-email:focus {
+  border: 1px solid #C30010;
+  outline: none;
+}
+.demo-form-submit {
+  width: 25%;
+  margin-top: 0;
+  padding: 16px;
+}
+.demo-form-submit.enabled:hover {
+  background-color: #E10819;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .demo-dialog {
+    max-width: 60vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .demo-dialog {
+    max-width: 70vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .demo-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .demo-form > * {
+    margin: 0 auto;
+  }
+  .demo-form-email {
+    width: 80%;
+  }
+  .demo-form-submit {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .demo .button--full {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .demo-dialog {
+    max-width: 100%;
+  }
+  .demo-content {
+    padding: 20px;
+  }
+  .demo-heading {
+    position: relative;
+    padding: 70px 0 20px;
+    width: calc(100% + 40px);
+    top: -20px;
+    left: -20px;
+    margin: 0;
+  }
+  .demo-form * {
+    width: 100%;
+  }
+  .demo-close-button {
+    z-index: 2000;
+  }
+}
+:root {
+  font-family: "Rubik", sans-serif !important;
+}
+
+h2 {
+  font: normal small-caps 400 40px "Rubik", sans-serif;
 }
 
 .header-title {
@@ -555,29 +1000,31 @@ h2 {
 .intro-info-list-item:hover::before {
   transform: scale(1.2);
 }
-.intro-info-list-item:nth-child(2)::before {
-  background-image: url("../assets/online/Group 181.svg");
+.intro-info-list-item:nth-of-type(1)::before {
+  background-image: url("../assets/online/icon-s-sebou.svg");
 }
-.intro-info-list-item:nth-child(3)::before {
-  background-image: url("../assets/online/Group 683.svg");
+.intro-info-list-item:nth-of-type(2)::before {
+  background-image: url("../assets/online/icon-na-rozvoz.svg");
   background-size: 80%;
 }
-.intro-info-list-item:nth-child(4)::before {
-  background-image: url("../assets/online/Group 687.svg");
+.intro-info-list-item:nth-of-type(3)::before {
+  background-image: url("../assets/online/icon-ke-stolu.svg");
 }
 .intro-info-list::before {
   position: absolute;
   content: "";
   top: -10%;
-  right: -15%;
+  right: -50%;
   background-color: white;
-  width: calc(100% + 400px);
-  height: 120%;
+  width: 200%;
+  height: 155%;
   border-radius: 500px;
   border-top-left-radius: 0;
 }
 .intro-info-button {
-  margin: 80px auto 0;
+  position: relative;
+  margin: 50px auto 0;
+  z-index: 2;
 }
 .intro-video {
   position: relative;
@@ -595,6 +1042,7 @@ h2 {
 }
 .intro-video-button {
   position: absolute;
+  width: max-content;
   top: 450px;
   right: -30px;
   font-size: 24px;
@@ -627,6 +1075,7 @@ h2 {
   }
 }
 .clients {
+  position: relative;
   padding: 0;
   background-color: #F8F8F8;
   position: relative;
@@ -634,6 +1083,7 @@ h2 {
   display: flex;
   align-items: center;
   height: 150px;
+  z-index: 2;
 }
 .clients-carousel {
   position: absolute;
@@ -707,6 +1157,13 @@ h2 {
 }
 .benefits-buttons-button {
   margin: 0 50px 0;
+  z-index: 3;
+}
+.benefits-buttons-button:first-of-type {
+  margin-left: 0;
+}
+.benefits-buttons-button:last-of-type {
+  margin-right: 0;
 }
 .benefits-bag {
   position: absolute;
@@ -784,7 +1241,7 @@ h2 {
   position: relative;
   padding: 0;
   margin: 150px 0 50px;
-  background-image: url("../assets/online/pexels-andrea-piacquadio-3801422.jpg");
+  background-image: url("../assets/online/carousel-item-1.jpg");
   background-size: cover;
   transition: all 0.6s ease;
   /*&::before {
@@ -804,19 +1261,19 @@ h2 {
   }*/
 }
 .reviews.i0 {
-  background-image: url("../assets/online/pexels-andrea-piacquadio-3801422.jpg");
+  background-image: url("../assets/online/carousel-item-1.jpg");
 }
 .reviews.i1 {
-  background-image: url("../assets/online/pexels-ketut-subiyanto-4353586.jpg");
+  background-image: url("../assets/online/carousel-item-2.jpg");
 }
 .reviews.i2 {
-  background-image: url("../assets/online/pexels-andrea-piacquadio-3907315.jpg");
+  background-image: url("../assets/online/carousel-item-3.jpg");
 }
 .reviews.i3 {
-  background-image: url("../assets/online/pexels-rodnae-productions-7363069.jpg");
+  background-image: url("../assets/online/carousel-item-4.jpg");
 }
 .reviews.i4 {
-  background-image: url("../assets/online/pexels-vlada-karpovich-4050293.jpg");
+  background-image: url("../assets/online/carousel-item-5.jpg");
 }
 .reviews-header {
   position: relative;
@@ -964,15 +1421,16 @@ h2 {
   font: normal normal 500 26px "Nunito", sans-serif;
 }
 .try-box-text-button {
-  width: max-content;
-  background-color: white;
-  color: #C30010;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.try-box-text-button:hover {
+  border: 1px solid transparent;
 }
 .try-box-img {
   position: absolute;
   height: 550px;
-  right: 5%;
+  right: 0;
   margin: 0;
   z-index: 3;
 }
@@ -1059,6 +1517,9 @@ h2 {
   .benefits-tray {
     bottom: 130px;
   }
+  .benefits-buttons-button {
+    min-width: 404px;
+  }
 
   .features-list-item {
     width: 48%;
@@ -1086,7 +1547,7 @@ h2 {
 }
 @media screen and (max-width: 992px) {
   .intro {
-    padding-top: 225px;
+    padding-top: 175px;
   }
   .intro .container {
     flex-wrap: wrap;
@@ -1094,6 +1555,9 @@ h2 {
   .intro-info {
     width: 100%;
     margin-bottom: 50px;
+  }
+  .intro-info-list::before {
+    height: 160%;
   }
   .intro-video {
     position: relative;
@@ -1134,9 +1598,11 @@ h2 {
     flex-wrap: wrap;
   }
   .benefits-buttons-button {
-    width: 100%;
+    width: 80%;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
-  .benefits-buttons-button:not(:last-child) {
+  .benefits-buttons-button:first-of-type {
     margin-bottom: 30px;
   }
   .benefits-bag {
@@ -1161,7 +1627,7 @@ h2 {
 
   .try {
     margin-top: 200px;
-    padding-bottom: 300px;
+    padding-bottom: 250px;
   }
   .try-box {
     flex-direction: column;
@@ -1199,20 +1665,20 @@ h2 {
   .benefits-bubbles-bubble:nth-child(1) {
     top: 0;
     left: 0;
-    height: 260px;
-    width: 260px;
+    height: 240px;
+    width: 240px;
   }
   .benefits-bubbles-bubble:nth-child(2) {
     top: 150px;
     right: 0;
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
   }
   .benefits-bubbles-bubble:nth-child(3) {
     top: 0;
     left: 0;
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
   }
   .benefits-bag {
     top: 270px;
@@ -1235,19 +1701,19 @@ h2 {
   }
 
   .reviews.i0 {
-    background-image: url("../assets/online/pexels-andrea-piacquadio-3801422-small.jpg");
+    background-image: url("../assets/online/carousel-item-1-small.jpg");
   }
   .reviews.i1 {
-    background-image: url("../assets/online/pexels-ketut-subiyanto-4353586-small.jpg");
+    background-image: url("../assets/online/carousel-item-2-small.jpg");
   }
   .reviews.i2 {
-    background-image: url("../assets/online/pexels-andrea-piacquadio-3907315-small.jpg");
+    background-image: url("../assets/online/carousel-item-3-small.jpg");
   }
   .reviews.i3 {
-    background-image: url("../assets/online/pexels-rodnae-productions-7363069-small.jpg");
+    background-image: url("../assets/online/carousel-item-4-small.jpg");
   }
   .reviews.i4 {
-    background-image: url("../assets/online/pexels-vlada-karpovich-4050293-small.jpg");
+    background-image: url("../assets/online/carousel-item-5-small.jpg");
   }
   .reviews-header {
     padding: 30px 50px;
@@ -1260,7 +1726,10 @@ h2 {
   }
 
   .try {
-    padding-bottom: 250px;
+    padding-bottom: 220px;
+  }
+  .try-box-text-button {
+    width: 100%;
   }
   .try-box-img {
     width: 65%;
@@ -1279,11 +1748,13 @@ h2 {
   }
   .intro-video-button {
     right: auto;
+    width: max-content !important;
   }
   .intro-info-list {
     margin-left: 2ch;
   }
   .intro-info-list::before {
+    right: 0;
     width: 150%;
   }
   .intro-info-list-item {
@@ -1384,6 +1855,10 @@ h2 {
 
   .table {
     display: none;
+  }
+
+  .footer {
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 400px) {

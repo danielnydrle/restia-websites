@@ -7,8 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<link rel="stylesheet" href="./styles/bs.css">
-	<link rel="stylesheet" href="./styles/home.css">
+	<link rel="stylesheet" href="./styles/bs.min.css">
+	<link rel="stylesheet" href="./styles/home.min.css">
+	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 	<title>RESTIA</title>
 </head>
 
@@ -32,14 +33,14 @@
 				<a href="#"
 					class="header-navbar-item header-navbar-item--outlined header-navbar--large-item header-navbar--large-item--outlined">Kontakty</a>
 			</nav>
-			<button class="header-navbar-burger" onclick="openNav()" aria-label="Otevřít navigaci">
+			<button class="header-navbar-burger" onclick="openNav()" aria-label="Otevřít menu">
 				<span></span><span></span><span></span>
 			</button>
 			<nav class="header-navbar header-navbar--small is-closed">
 				<div class="header-navbar--small-items">
 					<button
 						class="header-navbar-item header-navbar--small-item header-navbar--small-item-close-button"
-						onclick="closeNav()" aria-label="Zavřít navigaci">&times;</button>
+						onclick="closeNav()" aria-label="Zavřít menu">&times;</button>
 					<a href="./online.html"
 						class="header-navbar-item header-navbar--small-item header-navbar--small-item--product">ONLINE</a>
 					<a href="./agregator.html"
@@ -65,30 +66,31 @@
 					<p class="intro-info-para">Vy vaříte skvělá jídla.</p>
 					<p class="intro-info-para">My víme, jak je dostat k Vašim hostům.</p>
 					<div class="intro-info-buttons">
-						<button class="button button--full intro-info-buttons-button">OBJEDNEJTE SI
-							KONZULTACI
-							ZDARMA</button>
-						<button class="button button--outlined intro-info-buttons-button" data-bs-toggle="modal"
-							data-bs-target="#demo-modal">VYZKOUŠET
-							DEMO
-							VERZI</button>
+						<button class="button button--full intro-info-buttons-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+							<span class="button-text">OBJEDNEJTE SI KONZULTACI ZDARMA</span>
+							<i class="fas fa-chevron-right button-arrow"></i>
+						</button>
+						<button class="button button--outlined intro-info-buttons-button" data-bs-toggle="modal" data-bs-target="#demo-modal">
+							<span class="button-text">VYZKOUŠET DEMO VERZI</span>
+							<i class="fas fa-chevron-right button-arrow"></i>
+						</button>
 					</div>
 				</div>
 				<div class="intro-images">
 					<figure class="intro-image intro-image--dispecink">
-						<img src="./assets/home/Group 620.png" alt="RESTIA Dispečink" width="998" height="800">
+						<img src="./assets/home/screen-dispecink.png" alt="RESTIA Dispečink" width="998" height="800">
 					</figure>
 					<figure class="intro-image intro-image--pikolik">
-						<img src="./assets/home/Group 618.png" alt="RESTIA Pikolík" width="368" height="559">
+						<img src="./assets/home/screen-pikolik.png" alt="RESTIA Pikolík" width="368" height="559">
 					</figure>
 					<figure class="intro-image intro-image--agregator">
-						<img src="./assets/home/Group 681.png" alt="RESTIA Agregator" width="856" height="600">
+						<img src="./assets/home/screen-agregator.png" alt="RESTIA Agregator" width="856" height="600">
 					</figure>
 				</div>
 			</div>
 		</section>
 		<section class="products">
-			<img class="products-arrow" src="assets/arrow.svg" alt="">
+			<img class="products-arrow" src="./assets/home/arrow.svg" alt="">
 			<div class="container">
 				<p class="products-text">
 					Postavíme Vám z našich online nástrojů <b>Vaše vlastní řešení</b><br />
@@ -102,9 +104,10 @@
 							<p class="products-items-item-text-description">Chytrý systém objednávek s sebou a na
 								rozvoz</p>
 						</div>
-						<div class="products-items-item-img"><img src="./assets/home/Group 602.svg" alt="RESTIA Online">
+						<div class="products-items-item-img">
+							<img src="./assets/home/icon-online.svg" alt="RESTIA Online">
 						</div>
-						<a href="">CHCI PŘIVÉST HOSTY</a>
+						<a href="./online.html">CHCI PŘIVÉST HOSTY</a>
 					</article>
 					<article class="products-items-item products-items-item--agregator">
 						<div class="products-items-item-text">
@@ -113,9 +116,10 @@
 							<p class="products-items-item-text-description">Všechny online objednávky na jednom místě
 							</p>
 						</div>
-						<div class="products-items-item-img"><img src="./assets/home/Group 606.svg" alt="RESTIA Agregator">
+						<div class="products-items-item-img">
+							<img src="./assets/home/icon-agregator.svg" alt="RESTIA Agregator">
 						</div>
-						<a href="">CHCI MÍT VŠE POHROMADĚ</a>
+						<a href="./agregator.html">CHCI MÍT VŠE POHROMADĚ</a>
 					</article>
 					<article class="products-items-item products-items-item--pikolik">
 						<div class="products-items-item-text">
@@ -124,7 +128,8 @@
 							<p class="products-items-item-text-description">Objednávky od stolu & placení přes QR kód
 							</p>
 						</div>
-						<div class="products-items-item-img"><img src="./assets/home/Group 604.svg" alt="RESTIA Pikolík">
+						<div class="products-items-item-img">
+							<img src="./assets/home/icon-pikolik.svg" alt="RESTIA Pikolík">
 						</div>
 						<a href="">CHCI PRO HOSTY QR PLATBY</a>
 					</article>
@@ -134,9 +139,10 @@
 									class="products-items-item-text-heading--red">DISPEČINK</span></h2>
 							<p class="products-items-item-text-description">Systém pro efektivní rozvoz jídel</p>
 						</div>
-						<div class="products-items-item-img"><img src="./assets/home/Group 688.svg" alt="RESTIA Dispečink">
+						<div class="products-items-item-img">
+							<img src="./assets/home/icon-dispecink.svg" alt="RESTIA Dispečink">
 						</div>
-						<a href="">CHCI ŠETŘIT LIDI & BENZIN</a>
+						<a href="./dispecink.html">CHCI ŠETŘIT LIDI & BENZIN</a>
 					</article>
 				</div>
 			</div>
@@ -146,8 +152,11 @@
 				<p>Chcete se poradit?</p>
 				<p>Ukážeme vám, jak vám naše řešení <b>ušetří čas, práci a peníze.</b></p>
 				<button class="button button--full faqbox-button" data-bs-toggle="modal"
-					data-bs-target="#demo-modal" aria-label="Chci to zdarma vidět">CHCI TO
-					ZDARMA VIDĚT</button>
+					data-bs-target="#demo-modal" aria-label="Chci to zdarma vidět">
+					
+					<span class="button-text">CHCI TO ZDARMA VIDĚT</span>
+					<i class="fas fa-chevron-right button-arrow"></i>
+				</button>
 			</div>
 		</section>
 		<section class="reasons">
@@ -262,7 +271,7 @@
 			<div class="row-column row-column-address">
 				<div class="left">
 					<a href="#">
-						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="">
+						<img src="https://restia.cz/wp-content/uploads/2019/05/Restia-logo-white-02.svg" alt="Restia">
 					</a>
 					<address>
 						Americká 662/70<br />
@@ -319,10 +328,13 @@
 		data-bs-backdrop="static" data-bs-keyboard="false">
 		<div class="demo-dialog modal-dialog modal-dialog-centered" role="document">
 			<div class="demo-content modal-content">
-				<button class="demo-close-button" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+				<button class="demo-close-button" data-bs-dismiss="modal" aria-label="Zavřít">&times;</button>
 				<h2 class="demo-heading">Vyzkoušet <span class="is-red">DEMO</span> VERZI</h2>
 				<p>Podívejte se, jak by mohly vypadat Vaše online objednávky</p>
-				<a href="#" class="button button--full">UKÁZKA ONLINE OBJEDNÁVEK</a>
+				<a href="#" class="button button--full">
+					<div class="button-text">UKÁZKA ONLINE OBJEDNÁVEK</div>
+					<i class="fas fa-chevron-right button-arrow"></i>
+				</a>
 				<p>Chci si vyzkoušet, jak jednoduchá je administrace</p>
 				<small>Vyplňte prosím e-mail, na který Vám zašleme Vaše přihlašovací údaje</small>
 				<form class="demo-form" action="">

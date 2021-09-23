@@ -2,34 +2,16 @@
 @import "./root.scss";
 @import "./header.scss";
 @import "./footer.scss";
-
-.button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin-top: 50px;
-	padding: 28px 0;
-	width: 404px;
-	overflow: none;
-	border-radius: 100px;
-	transition: $transition;
-	text-decoration: none;
-	font: normal small-caps 400 18px $font-family;
-	
-	&:hover {
-		cursor: pointer;
-	}
-}
+@import "./modal.scss";
 
 .header {
 	&-title {
-		width: 58%;
+		width: 70%;
 	}
 }
 
 .intro {
-	padding-top: 250px;
+	padding-top: 200px;
 	padding-bottom: 0 !important;
 
 	.container {
@@ -45,17 +27,11 @@
 		width: 50%;
 
 		&-heading {
-			font: normal small-caps 400 24px "Rubik", sans-serif;
+			font: normal small-caps 400 30px "Rubik", sans-serif;
 			text-align: center;
 			line-height: 60px;
 			margin-bottom: 60px;
 
-		}
-
-		&-button {
-			background-color: white;
-			color: $red-medium;
-			border: 1px solid $red-medium;
 		}
 	}
 
@@ -67,7 +43,6 @@
 
 		img {
 			height: auto;
-			max-width: 100%;
 		}
 	}
 
@@ -254,8 +229,10 @@
 		align-items: center;
 
 		&-button {
-			margin: 0 30px;
-			transition: $transition;
+			width: max-content;
+			padding-left: 40px;
+			padding-right: 40px;
+			margin: 0 20px;
 
 			&:first-of-type {
 				margin-left: 0;
@@ -263,17 +240,6 @@
 
 			&:last-of-type {
 				margin-right: 0;
-			}
-
-			&--full {
-				color: white;
-				background: $red-medium;
-			}
-
-			&--outlined {
-				color: $red-medium;
-				background: white;
-				border: 1px solid $red-medium;
 			}
 		}
 	}
@@ -334,6 +300,9 @@
 		align-items: center;
 
 		&-button {
+			width: max-content;
+			padding-left: 40px;
+			padding-right: 40px;
 			margin: 0 30px;
 
 			&:first-of-type {
@@ -342,17 +311,6 @@
 
 			&:last-of-type {
 				margin-right: 0;
-			}
-
-			&--full {
-				color: white;
-				background: $red-medium;
-			}
-
-			&--outlined {
-				color: $red-medium;
-				background: white;
-				border: 1px solid $red-medium;
 			}
 		}
 	}
@@ -367,7 +325,7 @@
 		z-index: 1;
 		opacity: 0.5;
 		height: 400px;
-		background-image: url("../assets/dispecink/Mapa.png");
+		background-image: url("../assets/dispecink/mapa.webp");
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
@@ -399,9 +357,10 @@
 			}
 
 			&-button {
-				background-color: white;
-				color: $red-medium;
 				margin: 0 auto;
+				&:hover {
+					border: 1px solid transparent;
+				}
 			}
 		}
 
@@ -440,6 +399,10 @@
 @media screen and (max-width: 1200px) {
 	.intro {
 		overflow-x: hidden;
+
+		&-info {
+			width: 70%;
+		}
 
 		&-list {
 			flex-wrap: wrap;
@@ -532,6 +495,7 @@
 			position: static;
 			padding-top: 30px;
 			height: 300px;
+			width: auto;
 			justify-content: center;
 
 			img {
@@ -573,6 +537,18 @@
 				}
 			}
 		}
+		&-buttons {
+			&-button {
+				padding-left: 35px;
+				padding-right: 35px;
+				&:first-of-type {
+					margin-right: 10px;
+				}
+				&:last-of-type {
+					margin-left: 10px;
+				}
+			}
+		}
 	}
 
 	.options {
@@ -585,6 +561,18 @@
 
 			&-item {
 				display: inline-block;
+			}
+		}
+		&-buttons {
+			&-button {
+				padding-left: 35px;
+				padding-right: 35px;
+				&:first-of-type {
+					margin-right: 10px;
+				}
+				&:last-of-type {
+					margin-left: 10px;
+				}
 			}
 		}
 	}
@@ -625,8 +613,11 @@
 			flex-direction: column;
 
 			&-button {
+				width: 80%;
 				margin: 0;
 				margin-bottom: 20px;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
 
 				:last-of-type {
 					margin-bottom: 0;
@@ -649,8 +640,11 @@
 			flex-direction: column;
 
 			&-button {
+				width: 80%;
 				margin: 0;
 				margin-bottom: 20px;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
 
 				:last-of-type {
 					margin-bottom: 0;
@@ -677,11 +671,6 @@
 }
 
 @media screen and (max-width: 576px) {
-	.button {
-		text-align: center;
-		width: 80%;
-		padding: 20px;
-	}
 
 	.intro {
 		padding-top: 150px;
@@ -724,6 +713,12 @@
 				}
 			}
 		}
+		&-buttons {
+			&-button {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+		}
 	}
 
 	.easybox {
@@ -742,10 +737,16 @@
 				font-size: 18px;
 			}
 		}
+		&-buttons {
+			&-button {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+		}
 	}
 
 	.try {
-		padding-bottom: 300px;
+		padding-bottom: 326px;
 
 		&-map {
 			height: 300px;
@@ -764,7 +765,6 @@
 				}
 
 				&-button {
-					width: 100%;
 					padding: 20px 0;
 				}
 			}

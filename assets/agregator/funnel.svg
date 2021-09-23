@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="596.002" height="395.346" viewBox="0 0 596.002 395.346">
+  <defs>
+    <filter id="Path_511" x="0" y="0" width="596.002" height="395.346" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_695" data-name="Group 695" transform="translate(1314.647 -2168.477)">
+    <g transform="matrix(1, 0, 0, 1, -1314.65, 2168.48)" filter="url(#Path_511)">
+      <path id="Path_511-2" data-name="Path 511" d="M-1276.415,2213.334l-.732,53.042a12.21,12.21,0,0,0,4.087,9.116l203.245,181.109a12.212,12.212,0,0,1,4.087,9.116v33.388a12.21,12.21,0,0,0,15.115,11.86l78.148-19.138a12.211,12.211,0,0,0,9.306-11.86v-15.692a12.211,12.211,0,0,1,4.03-9.065l199.172-179.724a12.934,12.934,0,0,0,3.812-9.484l-13.961-53.215c0-6.726-5.453-21.811-12.179-21.811l-481.868,1.513S-1276.415,2206.59-1276.415,2213.334Z" transform="translate(1314.65 -2168.48)" fill="#a3a3a3"/>
+    </g>
+    <path id="Path_512" data-name="Path 512" d="M-1276.2,2208.064l-.945,58.326a12.179,12.179,0,0,0,4.076,9.093l203.266,181.127a12.18,12.18,0,0,1,4.077,9.093v33.443a12.178,12.178,0,0,0,15.075,11.829l28.755-7.042-.1-41.778a12.176,12.176,0,0,1,3.417-8.487l172.868-179.055a12.178,12.178,0,0,0,3.417-8.459v-75.942l-417.978.67C-1267,2190.884-1271.74,2201.147-1276.2,2208.064Z" transform="translate(0 0)" fill="#bababa"/>
+    <path id="Rectangle_405" data-name="Rectangle 405" d="M0,0H66.242A19.909,19.909,0,0,1,86.151,19.909V75.822a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(-842.293 2190.214)" fill="#bababa"/>
+    <path id="Rectangle_406" data-name="Rectangle 406" d="M0,0H434.777a0,0,0,0,1,0,0V55.914a19.909,19.909,0,0,1-19.909,19.909H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(-842.37 2266.036) rotate(-180)" fill="#d2d1d1"/>
+  </g>
+</svg>

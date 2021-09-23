@@ -1,0 +1,189 @@
+@import "./root.scss";
+
+.demo {
+	padding-right: 0 !important;
+	overflow: auto;
+
+	&-dialog {
+		max-width: 40vw;
+	}
+
+	&-content {
+		position: relative;
+		padding: 30px 50px;
+		border-radius: 20px;
+		border: 2px solid $gray-medium;
+		box-shadow: 0px 8px 10px #00000029;
+
+		* {
+			text-align: center;
+		}
+	}
+
+	&-close-button {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		background-color: transparent;
+		border: none;
+		font-size: 40px;
+		color: $gray-semidark;
+		transition: $transition;
+
+		&:hover {
+			cursor: pointer;
+			color: $red-medium;
+		}
+
+	}
+
+	&-heading {
+		background-image: linear-gradient(#ffffff88, white), url("../assets/home/demo.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: calc(100% + 60px);
+		margin: -30px;
+		margin-bottom: 0px;
+		padding: 50px 30px;
+		font: normal normal 600 30px $font-family;
+		color: $gray-dark;
+		border-radius: 20px 20px 0 0;
+
+		.is-red {
+			color: $red-medium;
+		}
+	}
+
+	p {
+		font-weight: 500;
+	}
+
+	.button--full {
+		margin: 20px auto;
+	}
+
+	small {
+		font: normal italic 300 16px $font-family;
+		color: $gray-medium;
+	}
+
+	&-form {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+
+		&-email {
+			width: 70%;
+			padding: 16px;
+			border: 1px solid $gray-semilight;
+			border-radius: 50px;
+			text-align: left;
+			font: normal normal 300 16px $font-family;
+			color: $gray-dark;
+			transition: $transition;
+
+			&::placeholder {
+				text-align: left;
+				color: $gray-medium;
+			}
+
+			&:focus {
+				border: 1px solid $red-medium;
+				outline: none;
+			}
+		}
+
+		&-submit {
+			width: 25%;
+			margin-top: 0;
+			padding: 16px;
+
+			&.enabled {
+				&:hover {
+					background-color: $red-light;
+				}
+			}
+		}
+	}
+}
+
+.modal-open {
+	padding-right: 0 !important;
+}
+
+@media screen and (max-width: 1400px) {
+	.demo {
+		&-dialog {
+			max-width: 60vw;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.demo {
+		&-dialog {
+			max-width: 70vw;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.demo {
+		&-form {
+			display: flex;
+			flex-direction: column;
+
+			&>* {
+				margin: 0 auto;
+			}
+
+			&-email {
+				width: 80%
+			}
+
+			&-submit {
+				width: 50%;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.demo {
+		.button--full {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.demo {
+		&-dialog {
+			max-width: 100%;
+		}
+
+		&-content {
+			padding: 20px;
+		}
+
+		&-heading {
+			position: relative;
+			padding: 70px 0 20px;
+			width: calc(100% + 40px);
+			top: -20px;
+			left: -20px;
+			margin: 0;
+		}
+
+		&-form {
+			* {
+				width: 100%;
+			}
+		}
+
+		&-close-button {
+			z-index: 2000;
+		}
+	}
+}

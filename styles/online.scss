@@ -3,6 +3,8 @@
 @import "./root.scss";
 @import "./header.scss";
 @import "./footer.scss";
+@import "./modal.scss";
+
 $font-rubik: "Rubik",
 sans-serif;
 $font-nunito: "Nunito",
@@ -14,66 +16,6 @@ sans-serif;
 
 h2 {
 	font: normal small-caps 400 40px $font-rubik;
-}
-
-.button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin-top: 50px;
-	padding: 28px;
-	overflow: none;
-	border-radius: 100px;
-	text-decoration: none;
-	font: normal small-caps 400 18px $font-rubik;
-	transition: $transition;
-
-	&--full {
-		background-color: $red-medium !important;
-		color: white !important;
-		border: none !important;
-
-		&:hover {
-			background-color: $red-light !important;
-		}
-	}
-
-	&--outlined {
-		background-color: white;
-		color: $red-medium !important;
-		border: 1px solid $red-medium;
-
-		&:hover {
-			background-color: $red-medium;
-			color: white !important;
-		}
-
-		&.enabled {
-			background-color: $red-medium;
-			color: white !important;
-
-			&:hover {
-				background-color: $red-light;
-			}
-		}
-
-		&.disabled {
-			background-color: white;
-			color: $red-medium !important;
-			border: 1px solid $red-medium;
-
-			&:hover {
-				background-color: inherit;
-				color: inherit;
-				cursor: not-allowed;
-			}
-		}
-	}
-
-	&:hover {
-		cursor: pointer;
-	}
 }
 
 .header {
@@ -171,22 +113,22 @@ h2 {
 					}
 				}
 
-				&:nth-child(2) {
+				&:nth-of-type(1) {
 					&::before {
-						background-image: url("../assets/online/Group 181.svg");
+						background-image: url("../assets/online/icon-s-sebou.svg");
 					}
 				}
 
-				&:nth-child(3) {
+				&:nth-of-type(2) {
 					&::before {
-						background-image: url("../assets/online/Group 683.svg");
+						background-image: url("../assets/online/icon-na-rozvoz.svg");
 						background-size: 80%;
 					}
 				}
 
-				&:nth-child(4) {
+				&:nth-of-type(3) {
 					&::before {
-						background-image: url("../assets/online/Group 687.svg");
+						background-image: url("../assets/online/icon-ke-stolu.svg");
 					}
 				}
 			}
@@ -195,17 +137,19 @@ h2 {
 				position: absolute;
 				content: "";
 				top: -10%;
-				right: -15%;
+				right: -50%;
 				background-color: white;
-				width: calc(100% + 400px);
-				height: 120%;
+				width: 200%;
+				height: 155%;
 				border-radius: 500px;
 				border-top-left-radius: 0;
 			}
 		}
 
 		&-button {
-			margin: 80px auto 0;
+			position: relative;
+			margin: 50px auto 0;
+			z-index: 2;
 		}
 	}
 
@@ -226,6 +170,7 @@ h2 {
 
 		&-button {
 			position: absolute;
+			width: max-content;
 			top: 450px;
 			right: -30px;
 			font-size: 24px;
@@ -276,6 +221,7 @@ h2 {
 }
 
 .clients {
+	position: relative;
 	padding: 0;
 	background-color: $gray-extralight;
 	position: relative;
@@ -283,6 +229,7 @@ h2 {
 	display: flex;
 	align-items: center;
 	height: 150px;
+	z-index: 2;
 
 	&-carousel {
 		position: absolute;
@@ -367,6 +314,15 @@ h2 {
 
 		&-button {
 			margin: 0 50px 0;
+			z-index: 3;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -464,28 +420,28 @@ h2 {
 	position: relative;
 	padding: 0;
 	margin: 150px 0 50px;
-	background-image: url("../assets/online/pexels-andrea-piacquadio-3801422.jpg");
+	background-image: url("../assets/online/carousel-item-1.jpg");
 	background-size: cover;
 	transition: all .6s ease;
 
 	&.i0 {
-		background-image: url("../assets/online/pexels-andrea-piacquadio-3801422.jpg");
+		background-image: url("../assets/online/carousel-item-1.jpg");
 	}
 
 	&.i1 {
-		background-image: url("../assets/online/pexels-ketut-subiyanto-4353586.jpg");
+		background-image: url("../assets/online/carousel-item-2.jpg");
 	}
 
 	&.i2 {
-		background-image: url("../assets/online/pexels-andrea-piacquadio-3907315.jpg");
+		background-image: url("../assets/online/carousel-item-3.jpg");
 	}
 
 	&.i3 {
-		background-image: url("../assets/online/pexels-rodnae-productions-7363069.jpg");
+		background-image: url("../assets/online/carousel-item-4.jpg");
 	}
 
 	&.i4 {
-		background-image: url("../assets/online/pexels-vlada-karpovich-4050293.jpg");
+		background-image: url("../assets/online/carousel-item-5.jpg");
 	}
 
 	/*&::before {
@@ -676,17 +632,19 @@ h2 {
 			}
 
 			&-button {
-				width: max-content;
-				background-color: white;
-				color: $red-medium;
-				margin: 0 auto;
+				margin-left: auto;
+				margin-right: auto;
+
+				&:hover {
+					border: 1px solid transparent;
+				}
 			}
 		}
 
 		&-img {
 			position: absolute;
 			height: 550px;
-			right: 5%;
+			right: 0;
 			margin: 0;
 			z-index: 3;
 		}
@@ -812,6 +770,12 @@ h2 {
 		&-tray {
 			bottom: 130px;
 		}
+
+		&-buttons {
+			&-button {
+				min-width: 404px;
+			}
+		}
 	}
 
 	.features {
@@ -856,7 +820,7 @@ h2 {
 
 @media screen and (max-width: 992px) {
 	.intro {
-		padding-top: 225px;
+		padding-top: 175px;
 
 		.container {
 			flex-wrap: wrap;
@@ -865,6 +829,11 @@ h2 {
 		&-info {
 			width: 100%;
 			margin-bottom: 50px;
+			&-list {
+				&::before {
+					height: 160%;
+				}
+			}
 		}
 
 		&-video {
@@ -916,9 +885,11 @@ h2 {
 			flex-wrap: wrap;
 
 			&-button {
-				width: 100%;
+				width: 80%;
+				margin-left: auto !important;
+				margin-right: auto !important;
 
-				&:not(:last-child) {
+				&:first-of-type {
 					margin-bottom: 30px;
 				}
 			}
@@ -950,7 +921,7 @@ h2 {
 
 	.try {
 		margin-top: 200px;
-		padding-bottom: 300px;
+		padding-bottom: 250px;
 
 		&-box {
 			flex-direction: column;
@@ -999,22 +970,22 @@ h2 {
 				&:nth-child(1) {
 					top: 0;
 					left: 0;
-					height: 260px;
-					width: 260px;
+					height: 240px;
+					width: 240px;
 				}
 
 				&:nth-child(2) {
 					top: 150px;
 					right: 0;
-					width: 280px;
-					height: 280px;
+					width: 260px;
+					height: 260px;
 				}
 
 				&:nth-child(3) {
 					top: 0;
 					left: 0;
-					width: 260px;
-					height: 260px;
+					width: 240px;
+					height: 240px;
 				}
 			}
 		}
@@ -1048,23 +1019,23 @@ h2 {
 
 	.reviews {
 		&.i0 {
-			background-image: url("../assets/online/pexels-andrea-piacquadio-3801422-small.jpg");
+			background-image: url("../assets/online/carousel-item-1-small.jpg");
 		}
 
 		&.i1 {
-			background-image: url("../assets/online/pexels-ketut-subiyanto-4353586-small.jpg");
+			background-image: url("../assets/online/carousel-item-2-small.jpg");
 		}
 
 		&.i2 {
-			background-image: url("../assets/online/pexels-andrea-piacquadio-3907315-small.jpg");
+			background-image: url("../assets/online/carousel-item-3-small.jpg");
 		}
 
 		&.i3 {
-			background-image: url("../assets/online/pexels-rodnae-productions-7363069-small.jpg");
+			background-image: url("../assets/online/carousel-item-4-small.jpg");
 		}
 
 		&.i4 {
-			background-image: url("../assets/online/pexels-vlada-karpovich-4050293-small.jpg");
+			background-image: url("../assets/online/carousel-item-5-small.jpg");
 		}
 
 		&-header {
@@ -1081,9 +1052,14 @@ h2 {
 	}
 
 	.try {
-		padding-bottom: 250px;
+		padding-bottom: 220px;
 
 		&-box {
+			&-text {
+				&-button {
+					width: 100%;
+				}
+			}
 
 			&-img {
 				width: 65%;
@@ -1107,20 +1083,23 @@ h2 {
 		&-video {
 			&-button {
 				right: auto;
+				width: max-content !important;
 			}
 		}
 
 		&-info {
 			&-list {
 				margin-left: 2ch;
-				
+
 				&::before {
+					right: 0;
 					width: 150%;
 				}
 
 				&-item {
 					width: 85%;
 					padding-left: 10px;
+
 					&-description {
 						width: 90%;
 					}
@@ -1253,6 +1232,10 @@ h2 {
 	.table {
 		display: none;
 	}
+
+	.footer {
+		margin-top: 0;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -1267,6 +1250,7 @@ h2 {
 			}
 		}
 	}
+
 	.benefits {
 		&-bubbles {
 			&-bubble {

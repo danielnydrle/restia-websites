@@ -18,9 +18,90 @@ section {
   padding: 100px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
   }
 }
 :root {
@@ -41,9 +122,90 @@ section {
   padding: 100px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
   }
 }
 .header {
@@ -78,19 +240,20 @@ section {
   align-items: center;
   text-decoration: none;
 }
-.header-title-logo-img {
+.header-title-logo-link-img {
   height: 30px;
   width: auto;
 }
 .header-title-logo-name {
   display: block;
-  margin-left: 5px;
   font: normal small-caps 500 24px "Rubik", sans-serif;
+  text-decoration: none;
   color: #830A0F;
+  margin-left: 8px;
 }
 .header-title-description {
-  font: normal normal 300 18px "Rubik", sans-serif;
   display: block;
+  font: normal normal 300 18px "Rubik", sans-serif;
   transition: all 0.3s ease-in-out;
 }
 .header-title-description b {
@@ -132,7 +295,7 @@ section {
   .header-navbar-item {
     margin-left: 25px;
   }
-  .header-title-logo-img {
+  .header-title-logo-link-img {
     height: 26px;
   }
   .header-title-logo-name {
@@ -150,7 +313,7 @@ section {
   .header-title {
     width: max-content;
   }
-  .header-title-logo-img {
+  .header-title-logo-link-img {
     height: 30px;
   }
   .header-title-logo-name {
@@ -214,11 +377,11 @@ section {
     transform: translateX(100%);
   }
   .header-navbar-burger {
-    width: 50px;
+    display: flex !important;
+    width: 60px !important;
     padding: 10px;
     background-color: transparent;
     border: none;
-    display: flex;
     flex-direction: column;
   }
   .header-navbar-burger:hover {
@@ -242,8 +405,11 @@ section {
   .header {
     height: 100px;
   }
+  .header-navbar-burger {
+    width: 52px !important;
+  }
   .header-navbar-burger span {
-    height: 3px;
+    height: 4px;
   }
   .header-navbar-burger span:first-child {
     margin-bottom: 8px;
@@ -262,7 +428,7 @@ section {
   }
 }
 @media screen and (max-width: 400px) {
-  .header-title-logo-img {
+  .header-title-logo-link-img {
     height: 24px;
   }
   .header-title-logo-name {
@@ -287,9 +453,90 @@ section {
   padding: 100px 0;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
 @media screen and (max-width: 576px) {
   .container {
     width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
   }
 }
 .footer {
@@ -414,6 +661,24 @@ section {
     margin-right: 5px;
   }
 }
+:root {
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 1px;
+}
+
+html,
+body,
+main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 0;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -428,16 +693,229 @@ section {
   text-decoration: none;
   font: normal small-caps 400 18px "Rubik", sans-serif;
 }
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
 .button:hover {
   cursor: pointer;
 }
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
 
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
+  }
+}
+.demo {
+  padding-right: 0 !important;
+  overflow: auto;
+}
+.demo-dialog {
+  max-width: 40vw;
+}
+.demo-content {
+  position: relative;
+  padding: 30px 50px;
+  border-radius: 20px;
+  border: 2px solid #919191;
+  box-shadow: 0px 8px 10px #00000029;
+}
+.demo-content * {
+  text-align: center;
+}
+.demo-close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: #707070;
+  transition: all 0.3s ease-in-out;
+}
+.demo-close-button:hover {
+  cursor: pointer;
+  color: #C30010;
+}
+.demo-heading {
+  background-image: linear-gradient(#ffffff88, white), url("../assets/home/demo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100% + 60px);
+  margin: -30px;
+  margin-bottom: 0px;
+  padding: 50px 30px;
+  font: normal normal 600 30px "Rubik", sans-serif;
+  color: #4E4E4E;
+  border-radius: 20px 20px 0 0;
+}
+.demo-heading .is-red {
+  color: #C30010;
+}
+.demo p {
+  font-weight: 500;
+}
+.demo .button--full {
+  margin: 20px auto;
+}
+.demo small {
+  font: normal italic 300 16px "Rubik", sans-serif;
+  color: #919191;
+}
+.demo-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.demo-form-email {
+  width: 70%;
+  padding: 16px;
+  border: 1px solid #CACACA;
+  border-radius: 50px;
+  text-align: left;
+  font: normal normal 300 16px "Rubik", sans-serif;
+  color: #4E4E4E;
+  transition: all 0.3s ease-in-out;
+}
+.demo-form-email::placeholder {
+  text-align: left;
+  color: #919191;
+}
+.demo-form-email:focus {
+  border: 1px solid #C30010;
+  outline: none;
+}
+.demo-form-submit {
+  width: 25%;
+  margin-top: 0;
+  padding: 16px;
+}
+.demo-form-submit.enabled:hover {
+  background-color: #E10819;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .demo-dialog {
+    max-width: 60vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .demo-dialog {
+    max-width: 70vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .demo-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .demo-form > * {
+    margin: 0 auto;
+  }
+  .demo-form-email {
+    width: 80%;
+  }
+  .demo-form-submit {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .demo .button--full {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .demo-dialog {
+    max-width: 100%;
+  }
+  .demo-content {
+    padding: 20px;
+  }
+  .demo-heading {
+    position: relative;
+    padding: 70px 0 20px;
+    width: calc(100% + 40px);
+    top: -20px;
+    left: -20px;
+    margin: 0;
+  }
+  .demo-form * {
+    width: 100%;
+  }
+  .demo-close-button {
+    z-index: 2000;
+  }
+}
 .header-title {
-  width: 58%;
+  width: 70%;
 }
 
 .intro {
-  padding-top: 250px;
+  padding-top: 200px;
   padding-bottom: 0 !important;
 }
 .intro .container {
@@ -452,15 +930,10 @@ section {
   width: 50%;
 }
 .intro-info-heading {
-  font: normal small-caps 400 24px "Rubik", sans-serif;
+  font: normal small-caps 400 30px "Rubik", sans-serif;
   text-align: center;
   line-height: 60px;
   margin-bottom: 60px;
-}
-.intro-info-button {
-  background-color: white;
-  color: #C30010;
-  border: 1px solid #C30010;
 }
 .intro-image {
   position: relative;
@@ -470,7 +943,6 @@ section {
 }
 .intro-image img {
   height: auto;
-  max-width: 100%;
 }
 .intro-list {
   margin-top: 40px;
@@ -622,23 +1094,16 @@ section {
   align-items: center;
 }
 .benefits-buttons-button {
-  margin: 0 30px;
-  transition: all 0.3s ease-in-out;
+  width: max-content;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 20px;
 }
 .benefits-buttons-button:first-of-type {
   margin-left: 0;
 }
 .benefits-buttons-button:last-of-type {
   margin-right: 0;
-}
-.benefits-buttons-button--full {
-  color: white;
-  background: #C30010;
-}
-.benefits-buttons-button--outlined {
-  color: #C30010;
-  background: white;
-  border: 1px solid #C30010;
 }
 
 .easybox {
@@ -691,6 +1156,9 @@ section {
   align-items: center;
 }
 .options-buttons-button {
+  width: max-content;
+  padding-left: 40px;
+  padding-right: 40px;
   margin: 0 30px;
 }
 .options-buttons-button:first-of-type {
@@ -698,15 +1166,6 @@ section {
 }
 .options-buttons-button:last-of-type {
   margin-right: 0;
-}
-.options-buttons-button--full {
-  color: white;
-  background: #C30010;
-}
-.options-buttons-button--outlined {
-  color: #C30010;
-  background: white;
-  border: 1px solid #C30010;
 }
 
 .try {
@@ -718,7 +1177,7 @@ section {
   z-index: 1;
   opacity: 0.5;
   height: 400px;
-  background-image: url("../assets/dispecink/Mapa.png");
+  background-image: url("../assets/dispecink/mapa.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -747,9 +1206,10 @@ section {
   font: normal normal 500 26px "Rubik", sans-serif;
 }
 .try-box-text-button {
-  background-color: white;
-  color: #C30010;
   margin: 0 auto;
+}
+.try-box-text-button:hover {
+  border: 1px solid transparent;
 }
 .try-box-img {
   position: relative;
@@ -774,6 +1234,9 @@ section {
 @media screen and (max-width: 1200px) {
   .intro {
     overflow-x: hidden;
+  }
+  .intro-info {
+    width: 70%;
   }
   .intro-list {
     flex-wrap: wrap;
@@ -845,6 +1308,7 @@ section {
     position: static;
     padding-top: 30px;
     height: 300px;
+    width: auto;
     justify-content: center;
   }
   .intro-image img {
@@ -878,6 +1342,16 @@ section {
   .benefits-items-list-item img {
     width: 70% !important;
   }
+  .benefits-buttons-button {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .benefits-buttons-button:first-of-type {
+    margin-right: 10px;
+  }
+  .benefits-buttons-button:last-of-type {
+    margin-left: 10px;
+  }
 
   .options-list {
     padding-left: 8%;
@@ -888,6 +1362,16 @@ section {
   }
   .options-list-item {
     display: inline-block;
+  }
+  .options-buttons-button {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .options-buttons-button:first-of-type {
+    margin-right: 10px;
+  }
+  .options-buttons-button:last-of-type {
+    margin-left: 10px;
   }
 
   .try-box {
@@ -912,8 +1396,11 @@ section {
     flex-direction: column;
   }
   .benefits-buttons-button {
+    width: 80%;
     margin: 0;
     margin-bottom: 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .benefits-buttons-button :last-of-type {
     margin-bottom: 0;
@@ -930,8 +1417,11 @@ section {
     flex-direction: column;
   }
   .options-buttons-button {
+    width: 80%;
     margin: 0;
     margin-bottom: 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .options-buttons-button :last-of-type {
     margin-bottom: 0;
@@ -951,12 +1441,6 @@ section {
   }
 }
 @media screen and (max-width: 576px) {
-  .button {
-    text-align: center;
-    width: 80%;
-    padding: 20px;
-  }
-
   .intro {
     padding-top: 150px;
   }
@@ -991,6 +1475,10 @@ section {
   .benefits-items-list-item {
     width: 100%;
   }
+  .benefits-buttons-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
   .easybox {
     width: 100%;
@@ -1004,9 +1492,13 @@ section {
   .options-list-item {
     font-size: 18px;
   }
+  .options-buttons-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
   .try {
-    padding-bottom: 300px;
+    padding-bottom: 326px;
   }
   .try-map {
     height: 300px;
@@ -1021,7 +1513,6 @@ section {
     font-size: 22px;
   }
   .try-box-text-button {
-    width: 100%;
     padding: 20px 0;
   }
   .try-box-img {

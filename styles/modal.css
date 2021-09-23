@@ -1,0 +1,251 @@
+:root {
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 1px;
+}
+
+html,
+body,
+main {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 28px 0;
+  width: 404px;
+  overflow: none;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  font: normal small-caps 400 18px "Rubik", sans-serif;
+}
+.button-text {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-arrow {
+  position: relative;
+  width: 0;
+  font-size: 1.4rem;
+  top: -1px;
+  left: 14px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(10px);
+}
+.button--full {
+  background-color: #C30010 !important;
+  color: white !important;
+  border: none !important;
+}
+.button--outlined {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.enabled {
+  background-color: #C30010;
+  color: white !important;
+}
+.button--outlined.disabled {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid #C30010;
+}
+.button--outlined.disabled:hover {
+  cursor: not-allowed;
+}
+.button--inverted {
+  background-color: white;
+  color: #C30010 !important;
+  border: 1px solid transparent;
+}
+.button--inverted:hover {
+  border: 1px solid #C30010;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover > .button-text {
+  transform: translateX(-15px);
+}
+.button:hover > .button-arrow {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+  }
+
+  .button {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .button:hover > .button-text {
+    transform: none;
+  }
+  .button:hover > .button-arrow {
+    opacity: 0;
+    transform: none;
+  }
+}
+.demo {
+  padding-right: 0 !important;
+  overflow: auto;
+}
+.demo-dialog {
+  max-width: 40vw;
+}
+.demo-content {
+  position: relative;
+  padding: 30px 50px;
+  border-radius: 20px;
+  border: 2px solid #919191;
+  box-shadow: 0px 8px 10px #00000029;
+}
+.demo-content * {
+  text-align: center;
+}
+.demo-close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: #707070;
+  transition: all 0.3s ease-in-out;
+}
+.demo-close-button:hover {
+  cursor: pointer;
+  color: #C30010;
+}
+.demo-heading {
+  background-image: linear-gradient(#ffffff88, white), url("../assets/home/demo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(100% + 60px);
+  margin: -30px;
+  margin-bottom: 0px;
+  padding: 50px 30px;
+  font: normal normal 600 30px "Rubik", sans-serif;
+  color: #4E4E4E;
+  border-radius: 20px 20px 0 0;
+}
+.demo-heading .is-red {
+  color: #C30010;
+}
+.demo p {
+  font-weight: 500;
+}
+.demo .button--full {
+  margin: 20px auto;
+}
+.demo small {
+  font: normal italic 300 16px "Rubik", sans-serif;
+  color: #919191;
+}
+.demo-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.demo-form-email {
+  width: 70%;
+  padding: 16px;
+  border: 1px solid #CACACA;
+  border-radius: 50px;
+  text-align: left;
+  font: normal normal 300 16px "Rubik", sans-serif;
+  color: #4E4E4E;
+  transition: all 0.3s ease-in-out;
+}
+.demo-form-email::placeholder {
+  text-align: left;
+  color: #919191;
+}
+.demo-form-email:focus {
+  border: 1px solid #C30010;
+  outline: none;
+}
+.demo-form-submit {
+  width: 25%;
+  margin-top: 0;
+  padding: 16px;
+}
+.demo-form-submit.enabled:hover {
+  background-color: #E10819;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .demo-dialog {
+    max-width: 60vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .demo-dialog {
+    max-width: 70vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .demo-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .demo-form > * {
+    margin: 0 auto;
+  }
+  .demo-form-email {
+    width: 80%;
+  }
+  .demo-form-submit {
+    width: 50%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .demo .button--full {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .demo-dialog {
+    max-width: 100%;
+  }
+  .demo-content {
+    padding: 20px;
+  }
+  .demo-heading {
+    position: relative;
+    padding: 70px 0 20px;
+    width: calc(100% + 40px);
+    top: -20px;
+    left: -20px;
+    margin: 0;
+  }
+  .demo-form * {
+    width: 100%;
+  }
+  .demo-close-button {
+    z-index: 2000;
+  }
+}
+
+/*# sourceMappingURL=modal.css.map */
